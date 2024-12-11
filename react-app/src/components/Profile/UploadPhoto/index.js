@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import upload from "../../../assets/profile/upload_photo.svg";
 import * as sessionActions from "../../../store/session";
+export const BASE_URL = "http://localhost:5000";
 
 const UploadPhoto = () => {
 	const dispatch = useDispatch();
@@ -22,7 +23,7 @@ const UploadPhoto = () => {
 
 		setPhotoLoading(true);
 
-		const res = await fetch("/api/auth/photo", {
+		const res = await fetch(`${BASE_URL}/api/auth/photo`, {
 			method: "POST",
 			body: formData,
 		});

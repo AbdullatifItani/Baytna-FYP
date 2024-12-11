@@ -8,6 +8,7 @@ import find_agent from "../../assets/find_agent.svg";
 
 import * as channelActions from "../../store/channel";
 import * as chatActions from "../../store/chat";
+import { BASE_URL } from "../../store/config";
 
 const Chats = () => {
 	const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const Chats = () => {
 
 	useEffect(() => {
 		// fetch to get channels and chats
-		fetch("/api/channels/")
+		fetch(`${BASE_URL}/api/channels/`)
 			.then((res) => res.json())
 			.then((res) => {
 				dispatch(channelActions.getChannels(res.channels));

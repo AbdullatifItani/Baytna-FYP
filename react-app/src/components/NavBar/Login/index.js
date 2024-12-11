@@ -38,7 +38,7 @@ const Login = () => {
 
 	return (
 		<div className="login-sign-modal">
-			<div className="login-sign-title">Welcome to Zillow</div>
+			<div className="login-sign-title">Welcome to Baytna</div>
 			<div className="login-sign-toggle-wrap">
 				<div
 					className="login-btn"

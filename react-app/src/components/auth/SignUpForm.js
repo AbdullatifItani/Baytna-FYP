@@ -138,7 +138,7 @@ const SignUpForm = () => {
 				Sign Up
 			</button>
 			<div className="login-sign-tfu">
-				By submitting, I accept Yillow's term of use.
+				By submitting, I accept Baytna's term of use.
 			</div>
 		</form>
 	);

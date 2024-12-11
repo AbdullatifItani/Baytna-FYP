@@ -1,3 +1,5 @@
+import { BASE_URL } from "./config";
+
 // Actions
 const GET_AGENTS = "agents/GET_AGENTS";
 const GET_AGENT = "agents/GET_AGENT";
@@ -19,7 +21,7 @@ const getAgent = (agent) => {
 
 // Thunks
 export const getAllAgents = () => async (dispatch) => {
-	const response = await fetch("/api/agents/");
+	const response = await fetch(`${BASE_URL}/api/agents/`);
 	if (response.ok) {
 		const data = await response.json();
 		dispatch(getAgents(data.agents));
@@ -35,7 +37,7 @@ export const getAllAgents = () => async (dispatch) => {
 };
 
 export const getThisAgent = (agent_id) => async (dispatch) => {
-	const response = await fetch(`/api/agents/${agent_id}`);
+	const response = await fetch(`${BASE_URL}/api/agents/${agent_id}`);
 	if (response.ok) {
 		const data = await response.json();
 		dispatch(getAgent(data.agent));

@@ -46,8 +46,7 @@ def add_appointment():
                 }
 
     if request.method == "POST":
-        form = AddAppointmentForm()
-        form['csrf_token'].data = request.cookies['csrf_token']
+        form = AddAppointmentForm(csrf_enabled=False)
         if form.validate_on_submit():
 
             # Check all the appointments in property to see if it overlaps
@@ -115,11 +114,10 @@ def edit_appointment(appointment_id):
         if appt:
             return {"appointment": appt.to_dict()}
         else:
-            return {"errors": ["Unauthorized"]}
+            return {"errors": ["Unauthorized1"]}
 
     if request.method == "PUT":
-        form = AddAppointmentForm()
-        form['csrf_token'].data = request.cookies['csrf_token']
+        form = AddAppointmentForm(csrf_enabled=False)
         if form.validate_on_submit():
 
             # get basic info from form
@@ -238,4 +236,4 @@ def edit_appointment(appointment_id):
             db.session.commit()
             return {"success": "success"}
 
-        return {'errors': ['Unauthorized']}, 401
+        return {'errors': ['Unauthorized2']}, 401

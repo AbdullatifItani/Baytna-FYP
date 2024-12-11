@@ -23,7 +23,7 @@ def delete_service_area(zip):
     service = AgentArea.query.filter(AgentArea.zip == zip, AgentArea.agent_id == current_user.id).first()
 
     if not service:
-        return {"errors": ["Unauthorized"]}, 401
+        return {"errors": ["Unauthorized7"]}, 401
 
     db.session.delete(service)
     db.session.commit()
@@ -38,10 +38,9 @@ def add_service_area():
 
     # If current user is not agent, not supposed to be here
     if not current_user.agent:
-        return {'errors': ["Unauthorized"]}, 401
+        return {'errors': ["Unauthorized8"]}, 401
 
-    form = ServiceAreaForm()
-    form['csrf_token'].data = request.cookies['csrf_token']
+    form = ServiceAreaForm(csrf_enabled=False)
     if form.validate_on_submit():
 
         service = AgentArea.query.filter(AgentArea.agent_id == current_user.id, AgentArea.zip == form.data["zip"]).first()

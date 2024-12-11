@@ -3,11 +3,8 @@ from flask_login import current_user
 from app.models import db, Chat
 import os
 
-if os.environ.get("FLASK_ENV") == "production":
-    origins = ["http://yillow-app.herokuapp.com", "https://yillow-app.herokuapp.com"]
-else:
-    origins = "*"
 
+origins = "*"
 socketio = SocketIO(cors_allowed_origins=origins)
 
 @socketio.on("join")

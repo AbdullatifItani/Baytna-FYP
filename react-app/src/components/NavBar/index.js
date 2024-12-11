@@ -68,7 +68,7 @@ const NavBar = () => {
 					</NavLink>
 				</div>
 				<NavLink to="/" exact={true}>
-					<img src={logo} alt="Yillow" />
+					<img src={logo} alt="Baytna" />
 				</NavLink>
 				<div className="nav-rt">
 					<button className="btn-font-lt" onClick={() => setShowLogin(true)}>

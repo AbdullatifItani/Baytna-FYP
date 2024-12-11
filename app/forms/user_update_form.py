@@ -11,3 +11,6 @@ class UserUpdateForm(FlaskForm):
     license_num = StringField("license_num", validators=[Length(max=20, message="License must be under 20 characters")])
     office = StringField("office", validators=[Length(max=100, message="Office must be under 100 characters")])
     bio = StringField("bio", validators=[Length(max=2000, message="Bio must be under 2000 characters")])
+    
+    class Meta:
+        csrf = False

@@ -1,6 +1,6 @@
 import ReactTooltip from "react-tooltip";
 
-import Frances from "../../assets/frances/Frances_500_500.png";
+import AUB from "../../assets/aub/AUB_new_logo.jpg";
 import git from "../../assets/about/git-logo.png";
 import linkedin from "../../assets/about/linkedin-logo.png";
 import skyline from "../../assets/about/skyline.png";
@@ -13,14 +13,14 @@ const About = () => {
 		>
 			<ReactTooltip />
 			<div className="wrapper">
-				<img className="img" src={Frances} alt="Frances" />
+				<img className="img" src={AUB} alt="AUB" />
 				<div>
-					<div className="name">Frances (Huang) Lau</div>
-					<div className="slogan">Love crafting from scratch</div>
+					<div className="name">Abdullatif Itani - Abdullah Itani - Mohammad Salam</div>
+					<div className="slogan">AUB</div>
 				</div>
 				<div className="icon-group">
 					<a
-						href="https://frances-y-h.github.io/"
+						href="https://github.com"
 						target="_blank"
 						rel="noreferrer"
 						data-tip="Portfolio"
@@ -29,7 +29,7 @@ const About = () => {
 					</a>
 
 					<a
-						href="https://github.com/frances-y-h"
+						href="https://github.com"
 						target="_blank"
 						rel="noreferrer"
 						data-tip="GitHub"
@@ -37,20 +37,12 @@ const About = () => {
 						<img src={git} className="icon" alt="Git" />
 					</a>
 					<a
-						href="https://www.linkedin.com/in/frances-huang-660607156/"
+						href="https://www.linkedin.com"
 						target="_blank"
 						rel="noreferrer"
 						data-tip="LinkedIn"
 					>
 						<img src={linkedin} className="icon" alt="Linked In" />
-					</a>
-					<a
-						href="https://angel.co/u/frances-huang-lau"
-						target="_blank"
-						rel="noreferrer"
-						data-tip="Angel List"
-					>
-						<i className="fa-brands fa-angellist icon"></i>
 					</a>
 				</div>
 			</div>

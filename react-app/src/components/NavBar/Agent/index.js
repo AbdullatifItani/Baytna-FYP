@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import LogoutButton from "../../auth/LogoutButton";
 
-import logo from "../../../assets/logo-white.svg";
+import logo from "../../../assets/logo-blue.svg";
 
 const AgentBar = () => {
 	return (
@@ -15,7 +15,7 @@ const AgentBar = () => {
 				</NavLink>
 			</div>
 			<NavLink to="/" exact={true}>
-				<img src={logo} alt="Yillow" />
+				<img src={logo} alt="Baytna" />
 			</NavLink>
 			<div className="nav-rt">
 				<NavLink to="/chats" exact={true}>

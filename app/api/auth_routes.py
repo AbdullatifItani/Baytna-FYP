@@ -29,11 +29,10 @@ def authenticate():
     if request.method == 'GET':
         if current_user.is_authenticated:
             return current_user.to_dict()
-        return {'errors': ['Unauthorized']}
+        return {'errors': ['Unauthorized3']}
 
     if request.method == "PUT":
-        form = UserUpdateForm()
-        form['csrf_token'].data = request.cookies['csrf_token']
+        form = UserUpdateForm(csrf_enabled=False)
         if form.validate_on_submit():
 
             user = User.query.filter(User.id == current_user.id).first()
@@ -62,10 +61,7 @@ def login():
     """
     Logs a user in
     """
-    form = LoginForm()
-    # Get the csrf_token from the request cookie and put it into the
-    # form manually to validate_on_submit can be used
-    form['csrf_token'].data = request.cookies['csrf_token']
+    form = LoginForm(csrf_enabled=False)
     if form.validate_on_submit():
         # Add the user to the session, we are logged in!
         user = User.query.filter(User.email == form.data['email']).first()
@@ -88,8 +84,7 @@ def sign_up():
     """
     Creates a new user and logs them in
     """
-    form = SignUpForm()
-    form['csrf_token'].data = request.cookies['csrf_token']
+    form = SignUpForm(csrf_enabled=False)
     if form.validate_on_submit():
 
         user = User(
@@ -110,7 +105,7 @@ def unauthorized():
     """
     Returns unauthorized JSON when flask-login authentication fails
     """
-    return {'errors': ['Unauthorized']}, 401
+    return {'errors': ['Unauthorized4']}, 401
 
 
 @auth_routes.route("/photo", methods=['POST'])

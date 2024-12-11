@@ -11,7 +11,7 @@ const Detail = ({ property, openTour }) => {
 	return (
 		<div className="property-detail-ctrl">
 			<div className="property-detail-top">
-				<img className="property-detail-logo" src={logo} alt="Yillow" />
+				<img className="property-detail-logo" src={logo} alt="Baytna" />
 				<div>{/* <i className="fa-regular fa-heart"></i> Save */}</div>
 			</div>
 			<div className="property-detail-btm">
@@ -106,7 +106,7 @@ const Detail = ({ property, openTour }) => {
 						<div className="property-detail-overview-desc">
 							{property?.description}
 						</div>
-						<div>Time on Yillow {property?.listing_date}</div>
+						<div>Time on Baytna {property?.listing_date}</div>
 					</div>
 					<div className="property-detail-agent">
 						<div>Listing Provided by:</div>
@@ -119,8 +119,8 @@ const Detail = ({ property, openTour }) => {
 					</div>
 					<div className="property-detail-mls">
 						The multiple listing data appearing on this website, or contained in
-						reports produced therefrom, is owned and copyrighted by California
-						Regional Multiple Listing Service, Inc. ("CRMLS") and is protected
+						reports produced therefrom, is owned and copyrighted by AUB
+						and is protected
 						by all applicable copyright laws. Information provided is for
 						viewer's personal, non-commercial use and may not be used for any
 						purpose other than to identify prospective properties the viewer may
@@ -130,8 +130,7 @@ const Detail = ({ property, openTour }) => {
 						do not warrant or guarantee such accuracy. The viewer should
 						independently verify the listed data prior to making any decisions
 						based on such information by personal inspection and/or contacting a
-						real estate professional. Based on information from California
-						Regional Multiple Listing Service, Inc. and /or other sources. All
+						real estate professional. Based on information from AUB and /or other sources. All
 						data, including all measurements and calculations of area, is
 						obtained from various sources and has not been, and will not be,
 						verified by broker or MLS. All information should be independently
@@ -142,8 +141,8 @@ const Detail = ({ property, openTour }) => {
 					</div>
 					<div className="footer-ctrl">
 						<div className="footer-logo-wrap">
-							<img className="footer-logo" src={logo} alt="Yillow" /> © 2022
-							Frances (Huang) Lau
+							<img className="footer-logo" src={logo} alt="Baytna" /> © 2024
+							AUB
 						</div>
 
 						<img src={footer} alt="Footer" />

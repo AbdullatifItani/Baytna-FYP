@@ -1,3 +1,5 @@
+import { BASE_URL } from "./config";
+
 // Actions
 const GET_IMAGES = "property_imgs/GET_IMAGES";
 
@@ -11,7 +13,7 @@ const getImages = (images) => {
 
 // Thunks
 export const getAllImages = (propertyId) => async (dispatch) => {
-	const response = await fetch(`/api/properties/${propertyId}/images`);
+	const response = await fetch(`${BASE_URL}/api/properties/${propertyId}/images`);
 	if (response.ok) {
 		const data = await response.json();
 		dispatch(getImages(data.images));

@@ -1,3 +1,5 @@
+import { BASE_URL } from "./config";
+
 // Actions
 const GET_CHANNELS = "channels/GET_CHANNELS";
 const ADD_CHANNEL = "channels/ADD_CHANNEL";
@@ -35,7 +37,7 @@ export const deleteChat = (payload) => {
 
 // Thunks
 export const addThisChannel = (channel) => async (dispatch) => {
-	const response = await fetch("/api/channels/", {
+	const response = await fetch(`${BASE_URL}/api/channels/`, {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
 		body: JSON.stringify(channel),

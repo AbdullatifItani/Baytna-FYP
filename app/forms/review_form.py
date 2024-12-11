@@ -16,3 +16,6 @@ class ReviewForm(FlaskForm):
     agent_id = IntegerField("agent_id", validators=[DataRequired(), valid_agent])
     rating = IntegerField("rating", validators=[DataRequired(), NumberRange(min=1, max=5, message="Rating must be between 1 to 5")] )
     content = StringField("content", validators=[Length(min=0, max=2000, message="Message must be less than 2000 characters")])
+    
+    class Meta:
+        csrf = False

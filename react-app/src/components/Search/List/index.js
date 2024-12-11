@@ -4,6 +4,7 @@ import { useHistory, useParams } from "react-router-dom";
 import PropertyCard from "./PropertyCard";
 
 import noproperty from "../../../assets/no-property-nobg.svg";
+export const BASE_URL = "http://localhost:5000";
 
 const List = ({
 	min,
@@ -56,7 +57,7 @@ const List = ({
 	};
 
 	useEffect(() => {
-		fetch("/api/search/terms")
+		fetch(`${BASE_URL}/api/search/terms`)
 			.then((res) => res.json())
 			.then((res) => setSearchList(res.terms))
 			.catch((err) => console.log(err));
@@ -159,6 +160,9 @@ const List = ({
 							Home type
 							<select value={type} onChange={(e) => setType(e.target.value)}>
 								<option value="">All</option>
+								<option value="Apartment">Apartment</option>
+								<option value="Villa">Villa</option>
+								<option value="Chalet">Chalet</option>
 								<option value="Single Family">Single Family</option>
 								<option value="Condominium">Condominium</option>
 								<option value="Townhouse">Townhouse</option>

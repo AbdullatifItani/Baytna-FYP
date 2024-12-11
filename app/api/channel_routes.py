@@ -37,8 +37,7 @@ def channels():
             }
 
     if request.method == "POST":
-        form = NewChannelForm()
-        form['csrf_token'].data = request.cookies['csrf_token']
+        form = NewChannelForm(csrf_enabled=False)
         if form.validate_on_submit():
             user_id = form.data['user_id']
             agent_id = form.data['agent_id']

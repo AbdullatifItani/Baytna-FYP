@@ -2,7 +2,6 @@ import os
 from flask import Flask, render_template, request, session, redirect
 from flask_cors import CORS
 from flask_migrate import Migrate
-from flask_wtf.csrf import CSRFProtect, generate_csrf
 from flask_login import LoginManager
 
 from .socket import socketio
@@ -21,6 +20,7 @@ from .seeds import seed_commands
 from .config import Config
 
 app = Flask(__name__)
+app.config.from_object(Config)
 
 # Setup login manager
 login = LoginManager(app)
@@ -49,7 +49,23 @@ Migrate(app, db)
 socketio.init_app(app)
 
 # Application Security
-CORS(app)
+#CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+#CORS(app, supports_credentials=True)
+#CORS(
+#    app,
+#    supports_credentials=True,
+#    resources={r"/*": {"origins": "http://localhost:3000"}}
+#)
+CORS(
+    app,
+    supports_credentials=True,
+    origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000"
+    ],
+    methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_headers=["Content-Type", "Authorization"]
+)
 
 
 # Since we are deploying with Docker and Flask,
@@ -57,24 +73,21 @@ CORS(app)
 # Therefore, we need to make sure that in production any
 # request made over http is redirected to https.
 # Well.........
+#@app.before_request
+#def https_redirect():
+#    if os.environ.get('FLASK_ENV') == 'production':
+#        if request.headers.get('X-Forwarded-Proto') == 'http':
+#            url = request.url.replace('http://', 'https://', 1)
+#            code = 301
+#            return redirect(url, code=code)
+
 @app.before_request
-def https_redirect():
-    if os.environ.get('FLASK_ENV') == 'production':
-        if request.headers.get('X-Forwarded-Proto') == 'http':
-            url = request.url.replace('http://', 'https://', 1)
-            code = 301
-            return redirect(url, code=code)
-
-
+def before_request():
+    print(session)
+    
 @app.after_request
-def inject_csrf_token(response):
-    response.set_cookie(
-        'csrf_token',
-        generate_csrf(),
-        secure=True if os.environ.get('FLASK_ENV') == 'production' else False,
-        samesite='Strict' if os.environ.get(
-            'FLASK_ENV') == 'production' else None,
-        httponly=True)
+def after_request(response):
+    print(session)
     return response
 
 

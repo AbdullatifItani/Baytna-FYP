@@ -1,3 +1,5 @@
+import { BASE_URL } from "./config";
+
 // Actions
 const GET_PROPERTIES = "properties/SEARCH_PROPERTIES";
 const GET_PROPERTY = "properties/GET_PROPERTY";
@@ -19,7 +21,7 @@ const getProperty = (property) => {
 
 // Thunks
 export const searchProperties = (term) => async (dispatch) => {
-	const response = await fetch(`/api/search/${term}`);
+	const response = await fetch(`${BASE_URL}/api/search/${term}`);
 	if (response.ok) {
 		const data = await response.json();
 		dispatch(getProperties(data.properties));
@@ -35,7 +37,7 @@ export const searchProperties = (term) => async (dispatch) => {
 };
 
 export const areaProperties = (payload) => async (dispatch) => {
-	const response = await fetch("/api/search/areas", {
+	const response = await fetch(`${BASE_URL}/api/search/areas`, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -57,7 +59,7 @@ export const areaProperties = (payload) => async (dispatch) => {
 };
 
 export const getThisProperty = (property_id) => async (dispatch) => {
-	const response = await fetch(`/api/properties/${property_id}`);
+	const response = await fetch(`${BASE_URL}/api/properties/${property_id}`);
 	if (response.ok) {
 		const data = await response.json();
 		dispatch(getProperty(data.property));

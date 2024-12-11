@@ -28,8 +28,7 @@ def reviews():
         if not current_user:
             return {"errors": ["Please login to review"]}
 
-        form = ReviewForm()
-        form['csrf_token'].data = request.cookies['csrf_token']
+        form = ReviewForm(csrf_enabled=False)
         if form.validate_on_submit():
             review = Review(
                 agent_id=form.data["agent_id"], \
@@ -54,8 +53,7 @@ def edit_review(review_id):
 
 
     if request.method == "PUT":
-        form = ReviewForm()
-        form['csrf_token'].data = request.cookies['csrf_token']
+        form = ReviewForm(csrf_enabled=False)
         if form.validate_on_submit():
             review_to_update = Review.query.get(review_id)
 
@@ -63,7 +61,7 @@ def edit_review(review_id):
                 return {'errors': ["Review not found"]}, 404
 
             if review_to_update.user_id != current_user.id:
-                return {'errors': ["Unauthorized"]}, 401
+                return {'errors': ["Unauthorized5"]}, 401
 
             review_to_update.rating = form.data['rating']
             review_to_update.content = form.data['content']
@@ -81,7 +79,7 @@ def edit_review(review_id):
             return {'errors': ["Review not found"]}, 404
 
         if review.user_id != current_user.id:
-            return {'errors': ["Unauthorized"]}, 401
+            return {'errors': ["Unauthorized6"]}, 401
 
         db.session.delete(review)
         db.session.commit()

@@ -18,3 +18,6 @@ class SignUpForm(FlaskForm):
     email = StringField('email', validators=[DataRequired(), user_exists, Email()])
     password = StringField('password', validators=[DataRequired()])
     agent = BooleanField('agent')
+    
+    class Meta:
+        csrf = False

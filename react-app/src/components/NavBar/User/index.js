@@ -45,7 +45,7 @@ const UserBar = () => {
 				</NavLink>
 			</div>
 			<NavLink to="/" exact={true}>
-				<img src={logo} alt="Yillow" />
+				<img src={logo} alt="Baytna" />
 			</NavLink>
 			<div className="nav-rt">
 				<NavLink className="btn-font-lt" to="/chats" exact={true}>

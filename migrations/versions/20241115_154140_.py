@@ -2,8 +2,7 @@
 
 Revision ID: 8b7388278692
 Revises: ffdc0a98111c
-Create Date: 2022-06-06 15:41:40.717892
-
+Create Date: 2024-11-15 15:41:40.717892
 """
 from alembic import op
 import sqlalchemy as sa

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useHistory } from "react-router-dom";
 
 import Footer from "./Footer";
+export const BASE_URL = "http://localhost:5000";
 
 const Splash = () => {
 	const history = useHistory();
@@ -35,7 +36,7 @@ const Splash = () => {
 	};
 
 	useEffect(() => {
-		fetch("/api/search/terms")
+		fetch(`${BASE_URL}/api/search/terms`)
 			.then((res) => res.json())
 			.then((res) => setSearchList(res.terms))
 			.catch((err) => console.log(err));

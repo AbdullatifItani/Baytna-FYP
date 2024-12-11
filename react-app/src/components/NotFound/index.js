@@ -14,7 +14,7 @@ const NotFound = () => {
 				<div className="error">Error 404 - page not found.</div>
 				<div>
 					<button className="btn" onClick={() => history.push("/")}>
-						Return to Zillow
+						Return to Baytna
 					</button>
 				</div>
 				<img className="cat" src={cat} alt="Cat" />
