@@ -62,7 +62,7 @@ const Splash = () => {
 							value={search}
 							onChange={(e) => setSearch(e.target.value)}
 							onFocus={() =>
-								setPlaceholder('Don\'t know where to start? Try "San Diego"')
+								setPlaceholder('Don\'t know where to start? Try "Beirut"')
 							}
 							onBlur={() =>
 								setPlaceholder("Enter an address, city, or ZIP code")
