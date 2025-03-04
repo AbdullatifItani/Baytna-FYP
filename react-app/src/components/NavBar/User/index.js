@@ -54,6 +54,9 @@ const UserBar = () => {
 				<NavLink className="btn-font-lt" to="/appointments" exact={true}>
 					Appointments
 				</NavLink>
+				<NavLink className="btn-font-lt" to="/properties">
+                    Properties
+                </NavLink>
 				<div
 					className="photo"
 					style={{ backgroundImage: `url("${image}")` }}

@@ -6,7 +6,7 @@
 
 ### Splash Page
 
-<img width="909" alt="Screen Shot 2022-06-15 at 7 57 20 AM" src>
+<img width="909" alt="Screen Shot 2024-06-15 at 7 57 20 AM" src>
 
 ### Google Map Search and filter
 
@@ -14,17 +14,17 @@
 
 ### Browse Properties and Schedule Appointments
 
-<img width="901" alt="Screen Shot 2022-12-11 at 7 59 13 PM" src>
+<img width="901" alt="Screen Shot 2024-12-11 at 7 59 13 PM" src>
 
 ### Manage Appointments
 
-<img width="899" alt="Screen Shot 2022-12-11 at 8 00 27 PM" src>
+<img width="899" alt="Screen Shot 2024-12-11 at 8 00 27 PM" src>
 
 ### Search and Review Agents
 
-<img width="898" alt="Screen Shot 2022-12-11 at 8 01 03 PM" src>
+<img width="898" alt="Screen Shot 2024-12-11 at 8 01 03 PM" src>
 
-<img width="899" alt="Screen Shot 2022-12-11 at 8 01 15 PM" src>
+<img width="899" alt="Screen Shot 2024-12-11 at 8 01 15 PM" src>
 
 ## Baytna at a Glance
 
@@ -110,7 +110,7 @@ Baytna is built on React and Redux frontend with Python Flask backend, using Pos
 
 ## Conclusion and Next Steps
 
-Baytna is not only a communication platform for regular users, also for agents. The next step for Baytna is to implement the agent interface, porfolio page, manage appointments, and communicate with client users through chat channels(web socket).
+Baytna is not only a communication platform for regular users, also for agents. The next step for Baytna is to implement the agent interface, portfolio page, manage appointments, and communicate with client users through chat channels(web socket).
 
 ## Conatact
 

@@ -9,10 +9,8 @@ def seed_users():
         username='Abdullatif', email='abdullatif@aa.io', password='password')
     abdullah = User(
         username='Abdullah', email='abdullah@aa.io', password='password')
-    mohammad = User(
-        username='Mohammad', email='mohammad@aa.io', password='password')
 
-    db.session.add_all([demo, abdullatif, abdullah, mohammad])
+    db.session.add_all([demo, abdullatif, abdullah])
 
     agent1 = User(username="Elias Khoury", email="agent1@user.com", password="password", phone="961-3-123456", agent=True, license_num="LB02145055", bio="An expert in Lebanese real estate, helping families find their perfect homes in Beirut and beyond.", photo="https://photos.zillowstatic.com/fp/e1c98c6600e18861f6924f92bf3a5518-h_g.jpg", broker_license="LB01517139", office="Byblos Real Estate")
     agent2 = User(username="Jad Haddad", email="agent2@user.com", password="password", phone="961-71-654321", agent=True, license_num="LB02188358", bio="Specializing in mountain properties across Lebanon, providing unique homes for every lifestyle.", photo="https://photos.zillowstatic.com/fp/32a0eacaaa51a4efb4add0f851b5b069-h_g.jpg", broker_license="LB01908329", office="Cedars Realty")

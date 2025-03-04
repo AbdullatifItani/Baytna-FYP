@@ -24,6 +24,9 @@ const AgentBar = () => {
 				<NavLink to="/appointments" exact={true}>
 					Appointments
 				</NavLink>
+				<NavLink className="btn-font-lt" to="/properties">
+					Properties
+				</NavLink>
 				<NavLink to="/profile" exact={true}>
 					My Profile
 				</NavLink>

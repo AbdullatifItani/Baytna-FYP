@@ -17,7 +17,7 @@ import Profile from "./components/Profile";
 import Reviews from "./components/Reviews";
 import Chats from "./components/Chats";
 import { authenticate } from "./store/session";
-
+import Properties from "./components/Property/ListedProperties";
 import About from "./components/About";
 
 function App() {
@@ -76,6 +76,9 @@ function App() {
 				<ProtectedRoute path={["/chats", "/chats/:channelId"]} exact={true}>
 					<Chats />
 				</ProtectedRoute>
+				<ProtectedRoute path="/properties" exact={true}>
+         			 <Properties />
+        		</ProtectedRoute>
 				<Route>
 					<NotFound />
 				</Route>
