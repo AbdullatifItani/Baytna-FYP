@@ -14,6 +14,7 @@ from .api.review_routes import review_routes
 from .api.search_routes import search_routes
 from .api.service_area_routes import service_area_routes
 from .api.channel_routes import channel_routes
+from .api.upload import upload_bp
 
 from .seeds import seed_commands
 
@@ -21,6 +22,7 @@ from .config import Config
 
 app = Flask(__name__)
 app.config.from_object(Config)
+app.config['UPLOAD_FOLDER'] = 'uploads/'
 
 # Setup login manager
 login = LoginManager(app)
@@ -44,6 +46,7 @@ app.register_blueprint(review_routes, url_prefix='/api/reviews')
 app.register_blueprint(search_routes, url_prefix='/api/search')
 app.register_blueprint(service_area_routes, url_prefix='/api/service_areas')
 app.register_blueprint(channel_routes, url_prefix='/api/channels')
+app.register_blueprint(upload_bp, url_prefix='/api')
 db.init_app(app)
 Migrate(app, db)
 socketio.init_app(app)

@@ -111,7 +111,7 @@ export const fetchUserProperties = (userId) => async (dispatch) => {
 };
 
 export const createProperty = (property) => async (dispatch) => {
-    const response = await fetch(`${BASE_URL}/api/properties`, {
+    const response = await fetch(`${BASE_URL}/api/properties/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -192,20 +192,23 @@ export default function reducer(state = initialState, action) {
             });
             return newState;
         case ADD_PROPERTY:
-            newState = { ...state, properties: [...state.properties, action.property] };
+            newState = {
+                ...state,
+                properties: state.properties ? [...state.properties, action.property] : [action.property],
+            };
             return newState;
         case EDIT_PROPERTY:
             newState = {
                 ...state,
-                properties: state.properties.map((property) =>
+                properties: state.properties ? state.properties.map((property) =>
                     property.id === action.property.id ? action.property : property
-                ),
+                ) : [action.property],
             };
             return newState;
         case DELETE_PROPERTY:
             newState = {
                 ...state,
-                properties: state.properties.filter((property) => property.id !== action.propertyId),
+                properties: state.properties ? state.properties.filter((property) => property.id !== action.propertyId) : [],
             };
             return newState;
         default:

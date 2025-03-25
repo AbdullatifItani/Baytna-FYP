@@ -35,6 +35,10 @@ const AddPropertyModal = ({ onSave, onClose }) => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleImageUpload = (url) => {
+    setFormData({ ...formData, front_img: url });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     onSave(formData);
@@ -50,7 +54,7 @@ const AddPropertyModal = ({ onSave, onClose }) => {
           {step === 2 && <AddressInformation formData={formData} handleChange={handleChange} />}
           {step === 3 && <Features formData={formData} handleChange={handleChange} />}
           {step === 4 && <Location formData={formData} handleChange={handleChange} />}
-          {step === 5 && <Images formData={formData} handleChange={handleChange} />}
+          {step === 5 && <Images formData={formData} handleChange={handleChange} handleImageUpload={handleImageUpload} />}
           <StepNavigation step={step} setStep={setStep} />
           {step === 5 && <button type="submit">Submit</button>}
         </form>

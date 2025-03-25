@@ -14,6 +14,5 @@ class Config:
     SESSION_COOKIE_SECURE = False  # Set to True in production
     SESSION_COOKIE_HTTPONLY = True
     SESSION_COOKIE_SAMESITE = 'Lax'
-    
-    AZURE_STORAGE_CONNECTION_STRING = "your_connection_string_here"
-    AZURE_CONTAINER_NAME = "your_container_name_here"
+    AZURE_STORAGE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=baytnastorage;AccountKey=3N7UoOKwMemVvpQ8HFy1XBCy4QNB73LwSgdXEZngvQol+8dPqE0kSxdEeanbxKzruz2002g4sbbg+AStHwJsXQ==;EndpointSuffix=core.windows.net"
+    AZURE_CONTAINER_NAME = "houseimages"
