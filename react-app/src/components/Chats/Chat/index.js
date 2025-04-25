@@ -26,7 +26,9 @@ const Chat = () => {
 
 	useEffect(() => {
 		// creat websocket/connect
-		socket = io('http://localhost:5000'); // Temporarily using local server
+		//socket = io('http://localhost:5000'); // Temporarily using local server
+		socket = io('http://127.0.0.1:5000'); // Temporarily using local server
+
 
 		// join room
 		socket.emit("join", channelId.toString());

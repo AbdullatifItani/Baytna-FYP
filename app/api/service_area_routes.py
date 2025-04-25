@@ -40,7 +40,7 @@ def add_service_area():
     if not current_user.agent:
         return {'errors': ["Unauthorized8"]}, 401
 
-    form = ServiceAreaForm(csrf_enabled=False)
+    form = ServiceAreaForm(meta={'csrf': False})
     if form.validate_on_submit():
 
         service = AgentArea.query.filter(AgentArea.agent_id == current_user.id, AgentArea.zip == form.data["zip"]).first()

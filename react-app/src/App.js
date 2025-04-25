@@ -19,6 +19,9 @@ import Chats from "./components/Chats";
 import { authenticate } from "./store/session";
 import Properties from "./components/Property/ListedProperties";
 import About from "./components/About";
+import SavedHomes from "./components/SavedHomes";
+import Chatbot from "./components/Chatbot";
+import PriceEstimator from "./components/PriceEstimator";
 
 function App() {
 	const [loaded, setLoaded] = useState(false);
@@ -79,10 +82,17 @@ function App() {
 				<ProtectedRoute path="/properties" exact={true}>
          			 <Properties />
         		</ProtectedRoute>
+				<ProtectedRoute path="/saved-homes" exact={true}>
+                    <SavedHomes />
+                </ProtectedRoute>
+				<Route path="/price-estimator" exact={true}>
+    				<PriceEstimator />
+				</Route>
 				<Route>
 					<NotFound />
 				</Route>
 			</Switch>
+			<Chatbot />
 		</BrowserRouter>
 	);
 }

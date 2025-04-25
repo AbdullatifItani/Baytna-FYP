@@ -2,7 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import { useHistory } from "react-router-dom";
 
 import Footer from "./Footer";
-export const BASE_URL = "http://localhost:5000";
+import axios from "axios"; // Import axios
+//export const BASE_URL = "http://localhost:5000";
+export const BASE_URL = "http://127.0.0.1:5000";
 
 const Splash = () => {
 	const history = useHistory();
@@ -36,9 +38,9 @@ const Splash = () => {
 	};
 
 	useEffect(() => {
-		fetch(`${BASE_URL}/api/search/terms`)
-			.then((res) => res.json())
-			.then((res) => setSearchList(res.terms))
+		axios
+			.get(`${BASE_URL}/api/search/terms`)
+			.then((response) => setSearchList(response.data.terms))
 			.catch((err) => console.log(err));
 	}, []);
 

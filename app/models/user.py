@@ -33,6 +33,10 @@ class User(db.Model, UserMixin):
 
     chats = db.relationship("Chat", back_populates="user")
 
+    favorites = db.relationship('Favorite', back_populates='user', cascade='all, delete-orphan')
+
+    
+
     @property
     def appointments(self):
         if self.agent:
@@ -46,7 +50,8 @@ class User(db.Model, UserMixin):
 
     @password.setter
     def password(self, password):
-        self.hashed_password = generate_password_hash(password)
+        #self.hashed_password = generate_password_hash(password)
+        self.hashed_password = generate_password_hash(password, method='pbkdf2:sha256')
 
     def check_password(self, password):
         return check_password_hash(self.password, password)

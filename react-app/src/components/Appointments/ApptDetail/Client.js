@@ -27,6 +27,7 @@ const ApptDetail = ({ appt, past, onClose }) => {
 	const { setToggleNotification, setNotificationMsg } = useNotification();
 
 	const property = properties[appt?.property_id];
+
 	const agent = agents[appt?.agent_id];
 
 	const schedule = editAvailable(property, appt.date, appt.time);

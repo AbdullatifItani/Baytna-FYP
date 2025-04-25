@@ -3,6 +3,9 @@ from app.models import Property, db
 from app.models import User
 from flask_login import current_user, login_required
 from app.forms import PropertyForm
+import joblib
+import pandas as pd
+import os
 
 property_routes = Blueprint('properties', __name__)
 
@@ -35,7 +38,7 @@ def get_user_properties(user_id):
 @property_routes.route("/", methods=["POST"])
 @login_required
 def add_property():
-    form = PropertyForm(csrf_enabled=False)
+    form = PropertyForm(meta={'csrf': False})
     if form.validate_on_submit():
         new_property = Property(
             status=form.data["status"],
@@ -73,7 +76,7 @@ def update_property(property_id):
     if property.listing_agent_id != current_user.id:
         return {"errors": ["Unauthorized"]}, 401
 
-    form = PropertyForm(csrf_enabled=False)
+    form = PropertyForm(meta={'csrf': False})
     if form.validate_on_submit():
         property.status = form.data["status"]
         property.street = form.data["street"]
@@ -118,3 +121,93 @@ def property_imgs(property_id):
     return {
         "images": [image.to_dict() for image in property.images]
     }
+
+@property_routes.route("/predict-price", methods=["POST"])
+def predict_price():
+
+    base_dir = os.path.dirname(os.path.dirname(__file__))  # Get the parent directory of 'api'
+    model_path = os.path.join(base_dir, "price_estimator.pkl")
+    columns_path = os.path.join(base_dir, "model_columns.pkl")
+
+    # Load the trained model and columns
+    model = joblib.load(model_path)
+    model_columns = joblib.load(columns_path)
+    #model = joblib.load("price_estimator.pkl")
+    #model_columns = joblib.load("model_columns.pkl")
+
+    # Get user input
+    data = request.json
+
+    """# Prepare input data
+    input_data = pd.DataFrame([data])
+    input_data = pd.get_dummies(input_data)
+
+    # Ensure all columns match the training data
+    for col in model_columns:
+        if col not in input_data:
+            input_data[col] = 0
+
+    # Predict price
+    predicted_price = model.predict(input_data)[0]
+    return jsonify({"predicted_price": predicted_price})"""
+
+    # 1) cast numeric fields
+    for col in ("bed","bath","sqft","lot","garage","built"):
+        data[col] = int(data.get(col, 0))
+
+    # 2) build DF and one‑hot only the categorical cols
+    input_data = pd.DataFrame([data])
+    input_data = pd.get_dummies(input_data, columns=["type","city"])
+
+    # 3) add any missing columns, then reorder
+    for col in model_columns:
+        if col not in input_data.columns:
+            input_data[col] = 0
+    input_data = input_data[model_columns]
+
+    # 4) predict
+    predicted_price = model.predict(input_data)[0]
+    return jsonify({"predicted_price": float(predicted_price)})
+
+@property_routes.route("/<int:property_id>/validate-price", methods=["GET"])
+def validate_price(property_id):
+    prop = Property.query.get(property_id)
+    if not prop:
+        return {"errors": ["Property not found"]}, 404
+
+    # 1) load model & columns (you likely already have this above)
+    base_dir = os.path.dirname(os.path.dirname(__file__))
+    model = joblib.load(os.path.join(base_dir, "price_estimator.pkl"))
+    model_columns = joblib.load(os.path.join(base_dir, "model_columns.pkl"))
+
+    # 2) build a clean input dict with only the features your model uses
+    data = {
+        "bed": prop.bed,
+        "bath": prop.bath,
+        "sqft": prop.sqft,
+        "lot": prop.lot,
+        "garage": prop.garage,
+        "built": prop.built,
+        "type": prop.type,    # categorical
+        "city": prop.city     # categorical
+    }
+
+    # 3) one‐hot encode
+    df = pd.DataFrame([data])
+    df = pd.get_dummies(df, columns=["type", "city"])
+
+    # 4) ensure all model columns are present
+    for col in model_columns:
+        if col not in df.columns:
+            df[col] = 0
+    df = df[model_columns]
+
+    # 5) predict
+    predicted_price = model.predict(df)[0]
+
+    return jsonify({
+        "property_id": property_id,
+        "listed_price": prop.price,
+        "predicted_price": float(predicted_price),
+        "difference": prop.price - predicted_price
+    })

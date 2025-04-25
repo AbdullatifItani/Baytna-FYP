@@ -1,0 +1,501 @@
+bed,bath,sqft,lot,type,city,garage,built,price
+4,1,345,1391,Manufactured Home,Sidon,3,1987,696520
+5,5,369,1778,House,Tripoli,2,1977,738140
+3,2,455,1694,Apartment,Byblos,1,1970,935060
+5,2,109,588,House,Beirut,2,2003,498900
+5,5,369,1661,Apartment,Sidon,3,1967,772320
+2,4,398,146,Apartment,Beirut,0,1985,620800
+3,2,377,1411,Cabin,Sidon,2,1994,729620
+3,4,316,877,Apartment,Byblos,0,2022,588180
+3,2,410,1139,Chalet,Beirut,2,2002,965200
+5,2,278,810,Condominium,Tyre,0,1979,417000
+4,3,319,500,Townhouse,Sidon,0,2009,452900
+3,2,365,1917,House,Tyre,1,1981,836400
+6,1,335,1080,Condominium,Beirut,0,2016,822000
+5,5,340,1209,Townhouse,Tyre,1,2016,587300
+2,5,262,349,House,Tyre,3,1977,437800
+4,4,214,490,House,Beirut,3,1993,632000
+6,2,54,1905,Townhouse,Byblos,1,1990,514500
+6,1,388,434,Apartment,Tyre,1,2012,478300
+2,4,428,728,Manufactured Home,Tyre,2,1972,567100
+4,3,127,1642,Villa,Byblos,2,1997,792480
+5,4,459,236,Condominium,Tyre,2,1981,504200
+1,4,111,982,Cabin,Tyre,3,2006,327900
+4,2,181,787,Condominium,Tyre,2,1982,336900
+2,3,138,1963,Cabin,Tripoli,0,1973,451540
+6,4,286,1621,Townhouse,Byblos,0,1988,713740
+5,1,91,926,Cabin,Tyre,2,1983,275200
+4,1,138,826,House,Byblos,0,2005,473840
+1,5,451,1600,Manufactured Home,Sidon,3,1977,854100
+1,3,345,693,Manufactured Home,Sidon,0,1986,512460
+3,3,377,1346,House,Tyre,3,1956,741700
+3,5,344,1089,Chalet,Byblos,1,2017,680160
+2,4,153,471,Townhouse,Byblos,1,1986,287140
+4,3,63,1034,Chalet,Byblos,1,2005,323760
+4,1,337,1094,Chalet,Tripoli,1,2014,504720
+6,1,228,501,Condominium,Sidon,0,2014,355520
+6,2,174,1566,Condominium,Byblos,2,1996,590140
+6,3,471,1613,Villa,Byblos,0,1969,1164320
+3,4,402,714,Cabin,Tripoli,3,1968,491820
+4,5,72,1396,House,Tripoli,0,1978,382580
+4,5,112,1649,Condominium,Byblos,0,2023,529160
+1,4,192,1282,Townhouse,Beirut,3,2009,694600
+3,2,202,1275,Cabin,Byblos,1,1967,529400
+5,5,194,1094,Villa,Byblos,1,1984,724860
+3,3,274,719,Villa,Tripoli,1,1992,549520
+5,2,499,287,Townhouse,Tripoli,2,1960,488260
+1,3,358,1936,Chalet,Byblos,3,1998,910740
+2,1,153,1221,Manufactured Home,Byblos,3,1987,487640
+4,2,153,230,Townhouse,Byblos,0,2013,232800
+1,5,484,904,Single Family,Tripoli,2,2018,614820
+4,2,88,1294,Townhouse,Byblos,1,1957,392160
+6,2,484,1035,Villa,Byblos,2,1983,1068200
+2,2,247,1085,House,Tyre,3,1997,580000
+2,2,183,282,Condominium,Beirut,3,2005,379100
+1,3,116,1082,House,Sidon,0,2014,470140
+2,1,440,463,Villa,Beirut,0,1980,1076400
+5,4,228,138,Condominium,Tyre,3,1953,249600
+2,2,91,1650,Single Family,Sidon,1,1999,460100
+4,5,497,596,Manufactured Home,Byblos,1,2018,745940
+4,2,64,1639,Cabin,Tyre,2,1979,388800
+4,5,160,1472,Villa,Byblos,3,2008,806780
+4,3,206,1081,Villa,Tripoli,3,2016,585480
+5,5,338,1020,Villa,Tyre,1,1994,736500
+3,4,280,1520,Condominium,Tripoli,1,1953,499600
+6,1,460,821,Apartment,Tyre,3,1975,629200
+1,5,469,1284,Townhouse,Tyre,0,1976,701300
+4,5,206,115,Apartment,Tripoli,3,1995,221100
+2,1,87,592,Single Family,Sidon,3,2013,249940
+4,4,490,1549,Manufactured Home,Beirut,1,2000,1197200
+2,2,146,1231,Chalet,Byblos,1,1999,467640
+6,5,460,993,Single Family,Tyre,0,1955,623600
+6,1,488,1573,Chalet,Byblos,0,2008,954620
+6,3,338,410,Chalet,Tripoli,2,1964,367500
+2,1,303,838,Manufactured Home,Byblos,3,1979,571720
+4,3,245,1293,House,Tripoli,1,1991,536240
+6,4,135,645,Apartment,Byblos,0,1986,297300
+5,2,371,513,Villa,Beirut,2,1991,1013400
+2,1,59,350,Cabin,Beirut,2,1984,193000
+2,5,54,858,Chalet,Beirut,1,1955,313400
+4,4,172,1904,Single Family,Beirut,1,2017,835200
+2,1,379,1264,House,Beirut,2,1967,1088700
+2,5,402,1397,Chalet,Beirut,0,2022,1020600
+6,1,167,1539,House,Tripoli,2,1978,513820
+4,3,343,1731,House,Tyre,3,2008,810700
+6,1,446,1862,Chalet,Byblos,3,1996,997580
+6,1,208,1162,Condominium,Beirut,1,1966,641100
+4,1,352,913,Townhouse,Tripoli,0,1971,454140
+1,4,277,128,Villa,Tripoli,0,2017,448340
+6,1,414,1057,Villa,Tripoli,3,2018,769360
+5,5,265,576,Condominium,Tyre,2,1986,380700
+5,3,485,417,Villa,Byblos,1,1998,918580
+2,3,233,344,House,Tyre,2,1962,390300
+5,1,64,847,Manufactured Home,Sidon,2,1983,255740
+2,4,206,796,Single Family,Tripoli,2,2002,337180
+1,4,185,371,Apartment,Sidon,0,2000,272620
+4,5,310,1563,Villa,Beirut,3,1952,1227400
+4,1,206,1871,Manufactured Home,Beirut,0,1991,853300
+4,3,96,1362,Chalet,Tyre,3,1981,376400
+5,4,373,476,Townhouse,Byblos,1,2000,559340
+1,1,381,365,House,Sidon,1,1995,604400
+5,4,222,1025,Townhouse,Byblos,2,1970,504900
+5,4,179,1020,Single Family,Tyre,3,1993,397000
+1,3,460,1482,Single Family,Beirut,3,1960,1132100
+1,2,144,439,Condominium,Byblos,3,2017,304160
+1,5,164,488,Cabin,Byblos,2,1950,296420
+1,5,292,676,Condominium,Beirut,2,2012,654300
+4,3,469,1812,Manufactured Home,Sidon,1,1973,898540
+3,4,341,102,Townhouse,Beirut,0,1962,510600
+3,1,331,1552,Cabin,Byblos,3,1960,767180
+1,4,348,1265,Chalet,Sidon,3,2000,678600
+3,3,332,475,House,Sidon,0,1966,550200
+3,5,118,1793,Townhouse,Beirut,3,1973,718900
+1,4,197,423,Condominium,Byblos,2,1968,329420
+3,5,60,245,Apartment,Tyre,2,1986,109500
+5,1,303,392,Cabin,Byblos,3,1957,453680
+2,5,379,1788,Cabin,Tripoli,2,1977,658940
+2,5,409,531,House,Tyre,2,1954,599700
+1,2,87,804,Villa,Sidon,3,1966,493080
+4,2,183,1048,Single Family,Tyre,1,1985,382600
+1,2,249,684,Single Family,Sidon,0,1968,395880
+4,5,72,498,Apartment,Sidon,2,2013,202760
+2,3,352,916,Manufactured Home,Tyre,1,1960,512700
+1,5,395,1467,Manufactured Home,Sidon,2,2003,766240
+6,3,351,1063,Chalet,Sidon,2,1994,624460
+5,3,412,1263,Townhouse,Tripoli,0,1996,583640
+3,2,445,286,Villa,Byblos,2,1961,830640
+4,4,267,1928,Condominium,Byblos,0,1970,755620
+6,1,190,160,Cabin,Tripoli,0,1960,167300
+3,2,153,1038,Apartment,Tyre,0,1954,325100
+3,2,495,1503,Single Family,Beirut,1,2005,1193400
+1,4,259,809,Chalet,Beirut,3,1969,633200
+3,1,160,906,Manufactured Home,Beirut,1,1990,504300
+5,5,153,1563,Apartment,Tripoli,3,1995,434040
+6,5,365,1442,Cabin,Tripoli,3,1961,586060
+3,2,220,1425,Condominium,Sidon,0,2019,552500
+1,1,405,1467,Chalet,Beirut,2,1966,1038100
+5,2,373,110,Cabin,Tyre,0,1968,366500
+2,3,182,1185,Single Family,Tyre,2,1975,414000
+6,2,425,1968,Single Family,Beirut,3,1997,1243900
+3,2,342,325,Single Family,Beirut,0,2001,598500
+1,5,377,1276,Apartment,Beirut,2,2019,965300
+2,5,176,1834,Apartment,Tripoli,1,2004,488020
+2,5,155,663,Manufactured Home,Tripoli,2,1982,257340
+4,3,141,871,Manufactured Home,Tripoli,0,2011,276680
+5,5,336,1694,Condominium,Byblos,1,1972,793260
+3,1,427,1707,Chalet,Tyre,2,1964,757900
+1,4,442,1783,House,Tyre,2,1976,894100
+4,1,100,1984,House,Sidon,2,2013,670480
+5,1,78,1698,Cabin,Tripoli,2,2000,383340
+4,5,345,1433,Single Family,Byblos,2,2002,766420
+6,4,346,984,Chalet,Byblos,1,2000,648860
+5,4,263,1366,Apartment,Tyre,3,1996,551700
+5,4,316,1616,Townhouse,Tripoli,1,1953,549280
+3,3,456,1489,Villa,Sidon,1,1956,1024680
+5,5,306,1453,Condominium,Tripoli,1,1984,526440
+4,4,351,1230,Single Family,Beirut,3,1997,911500
+5,3,150,325,Single Family,Tripoli,0,2022,192000
+3,2,454,924,Single Family,Beirut,3,2021,986200
+3,2,395,317,Apartment,Beirut,1,1994,682100
+6,3,159,1036,Apartment,Sidon,2,2021,420820
+4,3,469,852,Villa,Tyre,2,1968,830900
+2,5,231,605,Chalet,Tripoli,1,2012,320300
+2,5,362,358,Single Family,Beirut,2,1987,651400
+5,2,50,1897,House,Tripoli,1,2016,481960
+6,4,368,1640,Manufactured Home,Tyre,2,2008,707500
+1,2,487,1896,House,Tyre,3,2018,992700
+5,4,104,153,Cabin,Byblos,0,1962,130020
+6,4,420,1170,House,Tyre,0,1996,739500
+4,5,473,826,Cabin,Sidon,3,2010,724520
+4,1,448,788,Townhouse,Beirut,3,1980,915900
+4,1,198,1644,Manufactured Home,Byblos,1,1971,615160
+4,3,480,1222,House,Sidon,1,1992,900340
+4,5,358,1143,Townhouse,Tripoli,1,2016,533440
+6,4,186,1876,Condominium,Beirut,2,2003,850800
+6,1,251,1696,Chalet,Tyre,1,1959,567200
+3,4,485,1613,Townhouse,Beirut,3,1991,1224400
+2,1,362,518,Chalet,Tripoli,0,2013,413040
+4,1,166,789,House,Byblos,2,1970,501060
+1,1,203,949,Townhouse,Byblos,1,2015,476360
+6,5,474,161,Manufactured Home,Byblos,2,1990,609940
+1,2,340,1268,House,Tyre,2,1973,687600
+1,4,112,315,Single Family,Sidon,1,1984,182000
+1,5,293,102,Apartment,Sidon,2,2005,354740
+3,5,74,259,Townhouse,Beirut,0,1979,165700
+6,5,139,1862,Manufactured Home,Tyre,3,2006,531900
+1,5,124,880,Condominium,Byblos,3,1996,375500
+4,5,343,1243,Single Family,Byblos,0,1984,689420
+5,3,435,992,Condominium,Tripoli,2,1968,561560
+1,4,440,1212,House,Tripoli,1,1957,680160
+3,5,259,428,Apartment,Byblos,2,1975,408520
+6,4,467,679,Townhouse,Byblos,0,2020,720860
+3,3,396,1480,Townhouse,Tyre,2,1979,689000
+1,3,66,1733,House,Sidon,3,1956,559360
+6,4,177,1390,House,Tripoli,2,2016,515000
+5,1,476,1740,Apartment,Sidon,0,2014,900900
+1,2,492,1051,Manufactured Home,Tyre,3,1985,712200
+3,1,413,1446,Manufactured Home,Byblos,2,1974,837140
+2,1,300,734,Apartment,Sidon,2,1986,491980
+4,1,228,1087,Manufactured Home,Byblos,3,1950,526980
+3,5,231,1664,Cabin,Byblos,1,1964,656060
+6,3,201,1772,Chalet,Beirut,3,1986,843600
+1,1,74,1318,Apartment,Sidon,1,1962,349860
+4,3,229,1020,Apartment,Sidon,0,1957,442300
+1,4,247,837,Villa,Byblos,0,1954,701780
+6,2,393,1455,Single Family,Tyre,3,2009,706000
+1,4,210,269,Single Family,Beirut,3,2022,424200
+2,4,226,620,Cabin,Byblos,0,1950,382500
+4,5,334,1586,House,Tripoli,1,1985,666080
+4,2,112,139,House,Tripoli,0,1984,195320
+6,4,199,1660,Condominium,Beirut,3,2015,821500
+2,4,203,1384,Cabin,Tyre,0,2012,473300
+3,2,205,1518,Apartment,Byblos,3,1972,613820
+1,2,419,1054,Cabin,Sidon,3,1958,689280
+5,4,98,1349,Cabin,Beirut,0,1983,530700
+1,2,386,1083,Cabin,Tyre,1,1995,597600
+1,4,133,1247,Single Family,Sidon,2,1953,404640
+3,4,410,1074,Cabin,Tripoli,0,1979,539320
+1,5,226,137,Chalet,Tripoli,2,2021,246060
+2,1,197,427,House,Sidon,0,1952,384140
+2,4,167,1374,Condominium,Beirut,2,1963,651700
+4,3,391,1299,Chalet,Tripoli,1,2009,587720
+6,1,112,1725,Condominium,Byblos,1,1994,542900
+5,1,238,1013,Villa,Sidon,0,1983,683660
+1,1,409,553,Condominium,Sidon,3,1994,586060
+1,5,98,136,House,Tripoli,2,2010,215180
+3,4,376,1439,House,Beirut,3,1965,1145700
+6,5,306,1811,Cabin,Byblos,3,2015,826840
+2,4,273,1072,Townhouse,Beirut,3,1989,743100
+5,5,190,895,Villa,Tyre,1,1966,549500
+4,5,264,1072,Apartment,Tyre,0,1983,457400
+2,3,484,692,Manufactured Home,Tripoli,0,1965,530160
+6,5,428,1237,Condominium,Tripoli,1,2009,609860
+4,2,489,1163,Townhouse,Tripoli,1,2015,654440
+3,3,260,1424,Cabin,Tyre,0,2015,539800
+3,5,367,323,Single Family,Beirut,3,1962,645900
+1,1,81,417,Apartment,Beirut,2,2005,256600
+6,2,207,448,Townhouse,Tripoli,2,1980,264440
+5,2,334,214,Single Family,Byblos,2,1983,451160
+4,2,354,797,Villa,Beirut,3,1988,1081600
+2,3,478,1446,Cabin,Tyre,0,2016,762700
+6,5,335,1691,Apartment,Sidon,1,1957,716520
+6,5,193,1163,Apartment,Sidon,0,2004,457660
+3,1,473,1989,Apartment,Sidon,3,1976,963380
+1,1,68,139,Villa,Byblos,1,2002,353460
+1,2,67,1982,Condominium,Tripoli,3,1988,428560
+4,1,306,1872,Villa,Tyre,2,2014,894900
+3,3,127,1412,Manufactured Home,Byblos,2,1966,481780
+6,5,420,1385,House,Tyre,3,1979,804000
+5,2,224,315,Cabin,Tyre,1,2002,285500
+3,1,243,1270,Villa,Tripoli,1,1962,605800
+4,3,162,435,Single Family,Sidon,0,1970,246400
+4,3,163,1291,Manufactured Home,Tripoli,2,1968,370580
+3,1,271,191,House,Byblos,0,2002,479540
+4,5,215,452,Condominium,Byblos,0,1968,337980
+3,1,484,670,Single Family,Byblos,3,2006,762100
+2,2,368,1694,Cabin,Tripoli,3,1974,640620
+3,1,181,915,Single Family,Tyre,0,1980,341500
+3,3,434,1804,House,Tyre,2,2004,904300
+4,1,313,880,Single Family,Beirut,3,1972,737000
+4,5,462,462,Chalet,Byblos,0,1981,643280
+1,4,104,656,Townhouse,Tyre,0,2011,228200
+1,1,408,1468,Condominium,Beirut,0,2023,1051400
+2,5,180,1816,House,Tyre,0,1959,610200
+1,5,337,1293,Single Family,Byblos,0,2021,712720
+3,3,315,455,Townhouse,Sidon,0,2003,435600
+4,5,415,290,Townhouse,Byblos,3,2001,585600
+1,5,211,1790,Single Family,Tripoli,2,1969,504100
+1,5,429,521,Cabin,Tyre,0,1981,511200
+2,5,136,799,Chalet,Tyre,1,1963,274800
+6,2,104,106,Villa,Tripoli,3,1999,309680
+2,2,337,232,Chalet,Tripoli,3,1977,351060
+3,3,227,1870,Single Family,Sidon,0,2002,649600
+4,1,440,656,Condominium,Tyre,3,1973,575200
+2,5,398,925,Villa,Tyre,0,1971,756000
+1,1,57,860,House,Sidon,2,1979,358900
+4,1,370,1154,Chalet,Beirut,2,2012,914700
+4,3,362,634,Single Family,Sidon,3,1953,531680
+1,5,296,525,Chalet,Byblos,3,2008,502700
+2,5,372,1517,Villa,Tyre,1,1957,851400
+1,4,492,771,Manufactured Home,Tripoli,3,1961,579580
+6,1,304,462,Chalet,Byblos,1,1980,463180
+4,1,377,1560,House,Tyre,2,1983,788000
+5,2,103,1793,House,Sidon,2,1998,624260
+5,4,298,1674,Apartment,Byblos,0,2006,749860
+3,2,288,181,Chalet,Tyre,2,1975,319200
+1,2,278,455,Cabin,Beirut,1,1967,534500
+1,2,116,1381,Townhouse,Beirut,3,1987,599300
+3,3,100,1841,Townhouse,Tripoli,0,1999,408380
+3,3,146,688,Townhouse,Tyre,1,1957,259600
+3,2,141,1647,Manufactured Home,Beirut,3,1990,718100
+4,4,313,394,Apartment,Sidon,0,1955,395980
+6,1,467,1347,Manufactured Home,Tyre,2,2018,752900
+1,4,340,1648,Chalet,Sidon,1,1993,730560
+4,5,145,1169,Chalet,Sidon,3,2013,440680
+3,3,137,1790,Chalet,Beirut,0,1978,719000
+1,1,127,1236,Condominium,Tyre,0,1977,350200
+4,1,337,1356,Townhouse,Byblos,2,1960,717340
+6,5,169,116,Condominium,Beirut,3,2014,312800
+4,5,351,459,Apartment,Beirut,2,1968,655700
+6,2,449,1346,Manufactured Home,Tyre,2,1958,704700
+3,3,214,965,Townhouse,Tyre,3,1976,412500
+6,3,231,799,Condominium,Sidon,3,1983,438880
+1,4,447,547,Condominium,Tyre,3,1993,570400
+3,2,272,955,Single Family,Sidon,1,2017,515300
+1,2,360,464,Condominium,Beirut,3,1964,678700
+5,2,481,774,Cabin,Tripoli,0,2000,559720
+2,2,56,1107,Cabin,Byblos,2,1962,321380
+6,3,379,1449,Manufactured Home,Beirut,1,1998,999700
+2,3,312,566,Cabin,Tyre,3,2019,452200
+2,2,210,513,Manufactured Home,Byblos,1,2005,375120
+6,4,200,1578,Manufactured Home,Tripoli,3,2000,481540
+3,1,134,685,Apartment,Tripoli,1,1986,234400
+5,1,196,1356,Single Family,Sidon,2,1966,504420
+1,4,161,1347,Chalet,Byblos,2,2007,527480
+4,2,430,1093,House,Sidon,0,1978,799960
+1,3,452,1954,Manufactured Home,Beirut,0,1982,1242700
+4,1,85,1535,Villa,Byblos,3,2009,732400
+1,5,334,671,Chalet,Beirut,2,2004,711800
+6,5,237,434,Townhouse,Sidon,1,1959,333180
+5,4,131,1345,Cabin,Byblos,1,1996,475500
+4,2,51,136,House,Sidon,1,1972,179520
+3,1,434,1088,Villa,Byblos,0,1970,994420
+1,2,352,377,Chalet,Sidon,1,1962,448640
+1,1,246,1319,Apartment,Tripoli,0,1982,437320
+4,4,453,1015,Townhouse,Sidon,0,1973,695600
+3,4,60,1987,House,Tripoli,3,1960,499160
+3,5,283,583,Single Family,Sidon,1,1966,420060
+6,2,435,1365,Apartment,Byblos,1,2017,855600
+6,5,244,1447,Villa,Byblos,2,1996,885580
+6,2,168,830,House,Byblos,3,1974,525300
+6,5,445,291,Apartment,Tyre,2,2022,521700
+6,3,69,1140,Townhouse,Beirut,3,1970,448000
+6,3,310,623,Single Family,Byblos,1,1961,499520
+5,3,342,1017,Apartment,Tripoli,0,1986,471360
+3,3,471,500,Condominium,Byblos,0,1991,668200
+6,1,305,985,Single Family,Tyre,0,1966,472500
+3,3,271,804,Villa,Tripoli,0,1997,554620
+3,4,442,121,Townhouse,Tyre,0,1977,442200
+2,4,275,573,Cabin,Tripoli,2,1990,353140
+5,1,102,1243,Cabin,Sidon,3,1996,401160
+6,3,477,309,Cabin,Beirut,1,1967,789200
+1,3,404,405,House,Beirut,2,2020,895000
+4,3,391,1393,Villa,Tyre,3,1962,868100
+1,5,413,803,Townhouse,Beirut,0,1962,828900
+5,2,329,786,Single Family,Tyre,3,1980,493700
+4,5,130,384,House,Tyre,3,1951,299800
+5,2,251,815,Villa,Tyre,0,1965,584000
+3,3,207,1799,Condominium,Beirut,0,1958,816700
+4,3,169,862,Townhouse,Tyre,0,2022,339900
+3,5,108,1350,Cabin,Beirut,1,1987,558000
+1,5,264,1047,Apartment,Tyre,0,2003,462400
+1,2,177,480,Townhouse,Byblos,1,2005,327600
+4,4,273,559,Manufactured Home,Tyre,0,1994,369300
+4,2,258,1130,Villa,Tripoli,1,1983,604600
+6,5,419,128,Chalet,Tyre,3,1958,441100
+5,5,164,1006,Condominium,Sidon,2,1957,387720
+6,1,258,1156,Townhouse,Tyre,3,1956,484700
+5,5,63,1769,Chalet,Tripoli,3,1985,385120
+6,1,58,978,Manufactured Home,Tripoli,0,1967,199240
+3,4,89,178,Single Family,Beirut,1,1952,160400
+4,2,499,1046,Apartment,Byblos,2,1977,845840
+1,2,286,558,Chalet,Tyre,0,2019,394600
+5,1,330,669,Villa,Beirut,0,1993,979700
+5,2,408,1661,Cabin,Byblos,0,1970,860740
+1,5,250,1605,Manufactured Home,Tyre,3,1977,577000
+6,3,295,1553,Apartment,Sidon,1,2003,665160
+5,1,327,837,Condominium,Tyre,1,2003,493400
+3,2,284,1408,Cabin,Tripoli,2,2014,523540
+4,1,53,615,Townhouse,Tripoli,1,1970,140900
+1,1,203,1222,Chalet,Sidon,1,1962,470640
+4,3,491,496,Apartment,Beirut,0,2006,875800
+5,5,78,1612,House,Byblos,0,1998,586980
+5,1,158,138,Single Family,Tyre,3,2003,204600
+1,2,147,1394,Single Family,Tripoli,0,1959,350220
+3,4,264,986,Manufactured Home,Beirut,0,2002,680300
+2,1,342,896,Condominium,Sidon,0,1993,557320
+1,1,124,256,Manufactured Home,Tripoli,0,1996,143180
+2,3,375,1198,House,Sidon,3,2002,804560
+6,5,195,983,Villa,Tyre,0,2023,590600
+2,4,177,1923,Condominium,Byblos,2,1995,678920
+3,2,390,1253,Villa,Tripoli,2,1962,745040
+6,4,91,1810,Condominium,Tripoli,2,1986,408200
+2,2,405,1073,Condominium,Tyre,2,1973,613600
+6,5,90,1207,House,Beirut,0,1951,610100
+2,2,471,1145,Townhouse,Byblos,2,1963,829000
+3,3,83,1582,House,Tripoli,0,1959,416460
+2,3,66,1662,Condominium,Byblos,3,1984,487580
+2,3,214,1830,Apartment,Tripoli,2,1974,516500
+2,3,202,948,Villa,Byblos,1,1952,683420
+1,4,427,1505,House,Sidon,2,1966,901300
+1,5,125,847,Townhouse,Tripoli,2,1961,252960
+1,2,136,1563,Chalet,Byblos,0,2003,527320
+3,2,166,1727,Manufactured Home,Beirut,2,1973,761100
+6,3,411,1088,Condominium,Sidon,1,1978,677960
+5,3,391,120,Chalet,Sidon,0,1992,440000
+2,1,76,402,Single Family,Beirut,0,1974,209100
+2,5,362,968,Cabin,Byblos,3,2009,688720
+3,4,336,183,Townhouse,Tyre,3,2014,397100
+2,2,183,1897,Cabin,Beirut,2,1977,839600
+1,1,268,1782,Townhouse,Byblos,3,1965,749280
+5,1,217,1576,Apartment,Beirut,3,1996,813800
+4,2,147,1510,Manufactured Home,Beirut,3,2007,694500
+2,4,317,1630,Chalet,Tripoli,0,1976,554200
+1,1,286,1380,Villa,Byblos,0,2002,902900
+4,1,358,669,Townhouse,Tyre,0,1991,474800
+5,5,443,1033,Villa,Tripoli,3,2008,786140
+4,4,222,1650,Manufactured Home,Beirut,0,1996,813500
+1,1,450,1285,Condominium,Beirut,3,1983,1069500
+6,4,459,1286,Single Family,Beirut,0,1986,1054800
+6,2,239,1955,Chalet,Byblos,0,1955,721000
+4,3,171,1108,Manufactured Home,Byblos,1,1956,446620
+3,1,95,892,Manufactured Home,Tripoli,2,1974,240560
+4,5,113,891,Apartment,Tyre,3,1982,299700
+2,2,179,1647,Cabin,Tripoli,1,2004,457060
+2,4,359,1909,Single Family,Sidon,0,2007,805880
+6,2,412,1394,Chalet,Beirut,3,1956,1031700
+3,1,242,591,Condominium,Beirut,0,2006,530800
+1,4,356,307,Condominium,Beirut,2,1961,614100
+2,3,230,1662,House,Tripoli,1,1965,576160
+6,2,341,1707,Manufactured Home,Tripoli,2,1992,617660
+5,1,420,1183,Townhouse,Beirut,1,1956,960400
+6,5,331,529,Apartment,Tripoli,0,2000,380620
+2,4,78,1084,Single Family,Byblos,2,2022,372260
+2,2,198,1780,Condominium,Byblos,2,1981,662800
+6,2,316,1728,Chalet,Tripoli,0,1957,561440
+1,3,345,1432,House,Beirut,2,2021,1115100
+4,3,60,619,Chalet,Tripoli,3,1994,179920
+2,5,213,690,Apartment,Tripoli,1,2008,317400
+6,5,162,1150,Townhouse,Tripoli,1,1953,326800
+6,1,236,1809,House,Sidon,1,2016,773080
+3,1,344,1685,House,Byblos,3,1978,943700
+4,5,281,298,Cabin,Tyre,1,1978,327100
+5,5,276,486,Single Family,Tyre,0,1977,349200
+1,4,359,448,House,Sidon,2,1993,607460
+5,3,147,1059,Cabin,Tripoli,3,1953,316920
+4,1,104,792,Cabin,Sidon,1,1958,265140
+4,3,160,1659,Apartment,Sidon,0,1954,505480
+4,3,201,1951,Villa,Beirut,2,2005,1196800
+5,5,295,477,Chalet,Byblos,2,1999,475480
+4,4,455,998,Townhouse,Tyre,3,1964,654100
+6,2,118,1015,Chalet,Tripoli,3,1981,296900
+5,4,361,1681,House,Tyre,3,1977,803200
+4,4,338,626,Townhouse,Tyre,0,1971,436200
+6,3,299,1276,Condominium,Byblos,0,1966,635540
+3,4,85,833,Villa,Tyre,3,2008,473100
+4,1,288,305,Condominium,Tyre,1,2020,356500
+5,3,197,554,Condominium,Sidon,2,2006,349080
+2,1,276,1396,Single Family,Byblos,2,1975,661240
+4,2,293,1359,Chalet,Beirut,0,1974,821700
+2,3,386,1975,Apartment,Tripoli,2,1959,689900
+6,2,495,1863,Condominium,Tyre,1,1994,862100
+3,3,414,620,House,Tripoli,2,1960,561700
+1,5,250,1801,Villa,Beirut,0,2002,1203800
+3,4,203,1116,Manufactured Home,Tripoli,0,2021,381580
+4,5,499,1055,Condominium,Beirut,1,2017,1071000
+2,2,122,1954,Villa,Sidon,1,1977,770080
+2,4,250,825,Townhouse,Tyre,2,2014,429500
+5,3,345,1113,Chalet,Beirut,2,1998,857900
+2,4,66,600,Cabin,Tripoli,0,1996,152900
+5,1,178,216,Single Family,Tyre,1,2001,219200
+6,4,266,485,Villa,Sidon,1,2003,618300
+1,1,110,1467,House,Tyre,1,2009,505400
+4,4,476,683,House,Beirut,2,2006,1079400
+5,1,153,494,Villa,Sidon,1,1996,492480
+1,2,91,1187,House,Tripoli,0,1980,363060
+2,5,74,1840,Chalet,Sidon,0,1995,471200
+2,3,88,820,House,Sidon,2,1975,382200
+1,4,340,171,Cabin,Byblos,3,1954,443540
+2,5,180,1912,House,Sidon,2,2001,736640
+6,3,278,373,Cabin,Sidon,3,2003,406860
+6,3,157,1443,Condominium,Tyre,1,1982,434100
+1,1,221,437,Apartment,Tripoli,2,1999,284560
+5,2,484,1489,Chalet,Tyre,0,1987,762800
+5,2,151,1618,Apartment,Tyre,1,1976,460100
+1,5,403,706,Condominium,Beirut,0,1964,785800
+5,2,61,265,Chalet,Tyre,1,2010,116500
+5,4,324,1667,Villa,Byblos,2,1970,1021380
+6,2,150,110,Villa,Byblos,3,1995,461400
+5,5,93,1424,Cabin,Beirut,1,2018,573200
+3,2,492,828,Condominium,Tripoli,3,1955,586840
+4,4,354,900,Cabin,Tripoli,1,1987,471600
+2,1,494,201,Single Family,Tyre,0,2011,527200
+3,5,66,1548,House,Tyre,0,2011,468600
+5,1,379,1515,Manufactured Home,Tyre,1,2023,691000
+6,1,106,878,Single Family,Tripoli,3,1995,268440
+1,1,360,313,House,Sidon,2,1962,563360
+5,3,352,1814,Chalet,Byblos,2,1952,841260
+6,3,61,1211,Cabin,Sidon,0,1955,298520
+4,1,367,1676,Chalet,Sidon,2,1957,758420
+5,5,129,500,Chalet,Tripoli,0,1993,190100
+1,4,265,687,House,Sidon,2,1982,551140
+6,4,388,988,Condominium,Beirut,1,1999,875400
+6,2,313,1169,House,Tyre,0,1960,614300
+6,5,198,1795,Townhouse,Beirut,0,1977,811500
+4,3,130,1586,Villa,Byblos,1,2019,783640
+5,1,264,691,Villa,Tyre,0,1990,584700
+4,2,423,1433,Single Family,Sidon,2,1965,770560
+2,4,247,1209,Villa,Byblos,2,2017,842560
+2,3,249,191,House,Tyre,0,1997,373200
+5,3,74,1783,Cabin,Sidon,2,2005,483660
+4,1,138,772,House,Beirut,3,2013,612600

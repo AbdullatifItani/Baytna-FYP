@@ -66,6 +66,9 @@ const NavBar = () => {
 					<NavLink to="/agents" className="btn-font-lt">
 						Agent Finder
 					</NavLink>
+					<NavLink to="/price-estimator" className="btn-font-lt">
+						Price Estimator
+					</NavLink>
 				</div>
 				<NavLink to="/" exact={true}>
 					<img src={logo} alt="Baytna" />

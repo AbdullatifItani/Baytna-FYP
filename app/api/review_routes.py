@@ -28,7 +28,7 @@ def reviews():
         if not current_user:
             return {"errors": ["Please login to review"]}
 
-        form = ReviewForm(csrf_enabled=False)
+        form = ReviewForm(meta={'csrf': False})
         if form.validate_on_submit():
             review = Review(
                 agent_id=form.data["agent_id"], \
@@ -53,7 +53,7 @@ def edit_review(review_id):
 
 
     if request.method == "PUT":
-        form = ReviewForm(csrf_enabled=False)
+        form = ReviewForm(meta={'csrf': False})
         if form.validate_on_submit():
             review_to_update = Review.query.get(review_id)
 

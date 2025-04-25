@@ -59,6 +59,8 @@ const SearchArea = () => {
 				}
 			});
 		setPropArr(arr);
+		console.log("Properties from Redux store:", properties);
+		console.log("Updated propArr:", arr);
 	}, [min, max, type, bed, bath, properties]);
 
 	useEffect(() => {

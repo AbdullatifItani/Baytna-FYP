@@ -8,6 +8,8 @@ import appointments from "./appointment";
 import reviews from "./review";
 import channels from "./channel";
 import chats from "./chat";
+import favorites from "./favorites"
+import userProperties from "./userProperties";
 
 const rootReducer = combineReducers({
 	session,
@@ -18,6 +20,8 @@ const rootReducer = combineReducers({
 	reviews,
 	channels,
 	chats,
+	favorites,
+	userProperties,
 });
 
 let enhancer;

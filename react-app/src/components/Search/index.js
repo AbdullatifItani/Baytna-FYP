@@ -49,6 +49,7 @@ const Search = () => {
 					return prop?.bath === bath || prop?.bath - 0.5 === bath;
 				}
 			});
+			
 		setPropArr(arr);
 	}, [min, max, type, bed, bath, properties]);
 

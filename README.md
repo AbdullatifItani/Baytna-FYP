@@ -68,6 +68,8 @@ CREATE DATABASE baytna_app WITH OWNER baytna_app;
 5. Migrate and seed your database in root folder
 
 ```
+pipenv run flask db init
+pipenv run flask db migrate -m "Add tables"
 pipenv run flask db upgrade
 pipenv run flask seed all
 

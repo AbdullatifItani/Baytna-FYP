@@ -1,0 +1,20 @@
+.saved-homes-page {
+    padding: 20px;
+}
+
+.saved-homes-page h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.saved-homes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.no-saved-homes {
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+}

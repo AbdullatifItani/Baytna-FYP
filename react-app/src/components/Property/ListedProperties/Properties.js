@@ -3,13 +3,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { Redirect } from "react-router-dom";
 import PropertyCard from "./PropertyCard";
 import PropertyForm from "./PropertyForm";
-import { fetchUserProperties, createProperty, updateProperty, removeProperty } from "../../../store/property";
+import { createProperty, updateProperty, removeProperty } from "../../../store/property";
+import { fetchUserProperties } from "../../../store/userProperties";
 
 const Properties = () => {
   const [editingProperty, setEditingProperty] = useState(null);
   const [isFormVisible, setIsFormVisible] = useState(false);
   const user = useSelector((state) => state.session.user);
-  const properties = useSelector((state) => state.properties.userProperties);
+  const properties = useSelector((state) => state.userProperties);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -53,7 +54,7 @@ const Properties = () => {
           />
         </div>
       )}
-      <h1>My Properties</h1>
+      <h1>My Listings</h1>
       <div className="properties-list">
         {properties && Object.keys(properties).length > 0 ? (
           Object.values(properties).map((property) => (

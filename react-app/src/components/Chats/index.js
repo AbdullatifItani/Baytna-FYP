@@ -9,6 +9,7 @@ import find_agent from "../../assets/find_agent.svg";
 import * as channelActions from "../../store/channel";
 import * as chatActions from "../../store/chat";
 import { BASE_URL } from "../../store/config";
+import axios from "axios"; // Import axios
 
 const Chats = () => {
 	const dispatch = useDispatch();
@@ -18,14 +19,17 @@ const Chats = () => {
 	const [search, setSearch] = useState("");
 
 	useEffect(() => {
-		// fetch to get channels and chats
-		fetch(`${BASE_URL}/api/channels/`)
-			.then((res) => res.json())
-			.then((res) => {
-				dispatch(channelActions.getChannels(res.channels));
-				dispatch(chatActions.getChats(res.chats));
-			});
-	}, [dispatch]);
+        // Use axios to get channels and chats
+        axios
+            .get(`${BASE_URL}/api/channels/`, { withCredentials: true }) // Include credentials for authentication
+            .then((response) => {
+                dispatch(channelActions.getChannels(response.data.channels));
+                dispatch(chatActions.getChats(response.data.chats));
+            })
+            .catch((error) => {
+                console.error("Error fetching channels and chats:", error);
+            });
+    }, [dispatch]);
 
 	useEffect(() => {
 		if (user.agent) {

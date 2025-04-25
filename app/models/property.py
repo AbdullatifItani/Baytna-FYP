@@ -31,6 +31,8 @@ class Property(db.Model):
     images = db.relationship("PropertyImg", back_populates="property")
     appointments = db.relationship("Appointment", back_populates="property")
 
+    favorited_by = db.relationship('Favorite', back_populates='property', cascade='all, delete-orphan')
+
     def to_dict(self):
         return {
             "id": self.id,

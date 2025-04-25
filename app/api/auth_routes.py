@@ -32,7 +32,7 @@ def authenticate():
         return {'errors': ['Unauthorized3']}
 
     if request.method == "PUT":
-        form = UserUpdateForm(csrf_enabled=False)
+        form = UserUpdateForm(meta={'csrf': False})
         if form.validate_on_submit():
 
             user = User.query.filter(User.id == current_user.id).first()
@@ -61,7 +61,7 @@ def login():
     """
     Logs a user in
     """
-    form = LoginForm(csrf_enabled=False)
+    form = LoginForm(meta={'csrf': False})
     if form.validate_on_submit():
         # Add the user to the session, we are logged in!
         user = User.query.filter(User.email == form.data['email']).first()
@@ -84,7 +84,7 @@ def sign_up():
     """
     Creates a new user and logs them in
     """
-    form = SignUpForm(csrf_enabled=False)
+    form = SignUpForm(meta={'csrf': False})
     if form.validate_on_submit():
 
         user = User(

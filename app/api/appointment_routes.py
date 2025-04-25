@@ -46,7 +46,7 @@ def add_appointment():
                 }
 
     if request.method == "POST":
-        form = AddAppointmentForm(csrf_enabled=False)
+        form = AddAppointmentForm(meta={'csrf': False})
         if form.validate_on_submit():
 
             # Check all the appointments in property to see if it overlaps
@@ -117,7 +117,7 @@ def edit_appointment(appointment_id):
             return {"errors": ["Unauthorized1"]}
 
     if request.method == "PUT":
-        form = AddAppointmentForm(csrf_enabled=False)
+        form = AddAppointmentForm(meta={'csrf': False})
         if form.validate_on_submit():
 
             # get basic info from form

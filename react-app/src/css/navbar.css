@@ -3,7 +3,7 @@
 .nav {
 	display: grid;
 	grid-template-columns: 1fr 160px 1fr;
-	padding: 22px;
+	padding: 5px;
 	border-bottom: 1px solid gray;
 	align-items: center;
 	position: sticky;
@@ -77,7 +77,7 @@
 .nav-agent {
 	background-color: var(--blue2);
 	color: white;
-	padding: 15px;
+	padding: 5px;
 }
 
 .nav-agent .btn-font-lt {

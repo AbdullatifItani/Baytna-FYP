@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios'; // Import axios
 
 const UploadImage = ({ onUpload }) => {
     const [file, setFile] = useState(null);
@@ -22,16 +23,16 @@ const UploadImage = ({ onUpload }) => {
         formData.append('file', file);
 
         try {
-            const response = await fetch('http://127.0.0.1:5000/api/upload', {
-                method: 'POST',
-                body: formData,
+            const response = await axios.post('http://127.0.0.1:5000/api/upload', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
             });
 
-            const data = await response.json();
-            if (response.ok) {
-                onUpload(data.url);
+            if (response.status === 200) {
+                onUpload(response.data.url);
             } else {
-                setError(data.error || 'Failed to upload image');
+                setError(response.data.error || 'Failed to upload image');
             }
         } catch (err) {
             setError('Failed to upload image');

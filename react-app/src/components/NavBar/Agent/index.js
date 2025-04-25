@@ -13,6 +13,9 @@ const AgentBar = () => {
 				<NavLink to="/reviews" exact={true}>
 					My Reviews
 				</NavLink>
+				<NavLink to="/price-estimator">
+					Price Estimator
+				</NavLink>
 			</div>
 			<NavLink to="/" exact={true}>
 				<img src={logo} alt="Baytna" />
@@ -29,6 +32,9 @@ const AgentBar = () => {
 				</NavLink>
 				<NavLink to="/profile" exact={true}>
 					My Profile
+				</NavLink>
+				<NavLink className="btn-font-lt" to="/saved-homes" exact={true}>
+    				Saved Homes
 				</NavLink>
 				<LogoutButton />
 			</div>
