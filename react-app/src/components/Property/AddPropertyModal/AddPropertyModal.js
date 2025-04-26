@@ -46,16 +46,42 @@ const AddPropertyModal = ({ onSave, onClose }) => {
   };
 
   return (
-    <div className="modal">
-      <div className="modal-content">
+    <div className="add-property-modal">
+      <div className="add-property-modal-content">
         <button className="close-button" onClick={onClose}>X</button>
         <form onSubmit={handleSubmit}>
-          {step === 1 && <PropertyDetails formData={formData} handleChange={handleChange} />}
-          {step === 2 && <AddressInformation formData={formData} handleChange={handleChange} />}
-          {step === 3 && <Features formData={formData} handleChange={handleChange} />}
-          {step === 4 && <Location formData={formData} handleChange={handleChange} />}
-          {step === 5 && <Images formData={formData} handleChange={handleChange} handleImageUpload={handleImageUpload} />}
-          <StepNavigation step={step} setStep={setStep} />
+          {step === 1 && (
+            <PropertyDetails
+              formData={formData}
+              handleChange={handleChange}
+            />
+          )}
+          {step === 2 && (
+            <AddressInformation
+              formData={formData}
+              handleChange={handleChange}
+            />
+          )}
+          {step === 3 && (
+            <Features
+              formData={formData}
+              handleChange={handleChange}
+            />
+          )}
+          {step === 4 && (
+            <Location
+              formData={formData}
+              handleChange={handleChange}
+            />
+          )}
+          {step === 5 && (
+            <Images
+              handleImageUpload={handleImageUpload}
+            />
+          )}
+          <div className="step-navigation">
+            <StepNavigation step={step} setStep={setStep} />
+          </div>
           {step === 5 && <button type="submit">Submit</button>}
         </form>
       </div>

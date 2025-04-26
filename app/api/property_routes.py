@@ -39,33 +39,40 @@ def get_user_properties(user_id):
 @login_required
 def add_property():
     form = PropertyForm(meta={'csrf': False})
-    if form.validate_on_submit():
-        new_property = Property(
-            status=form.data["status"],
-            street=form.data["street"],
-            city=form.data["city"],
-            state_id=form.data["state_id"],
-            zip=form.data["zip"],
-            type=form.data["type"],
-            price=form.data["price"],
-            bed=form.data["bed"],
-            bath=form.data["bath"],
-            sqft=form.data["sqft"],
-            lot=form.data["lot"],
-            listing_id=form.data["listing_id"],
-            listing_date=form.data["listing_date"],
-            listing_agent_id=current_user.id,
-            built=form.data["built"],
-            garage=form.data["garage"],
-            lat=form.data["lat"],
-            long=form.data["long"],
-            front_img=form.data["front_img"],
-            description=form.data["description"]
-        )
-        db.session.add(new_property)
-        db.session.commit()
-        return {"property": new_property.to_dict()}
-    return {'errors': form.errors}, 400
+    try:
+        if form.validate_on_submit():
+            new_property = Property(
+                status=form.data["status"],
+                street=form.data["street"],
+                city=form.data["city"],
+                state_id=form.data["state_id"],
+                zip=form.data["zip"],
+                type=form.data["type"],
+                price=form.data["price"],
+                bed=form.data["bed"],
+                bath=form.data["bath"],
+                sqft=form.data["sqft"],
+                lot=form.data["lot"],
+                listing_id=form.data["listing_id"],
+                listing_date=form.data["listing_date"],
+                listing_agent_id=current_user.id,
+                built=form.data["built"],
+                garage=form.data["garage"],
+                lat=form.data["lat"],
+                long=form.data["long"],
+                front_img=form.data["front_img"],
+                description=form.data["description"]
+            )
+            db.session.add(new_property)
+            db.session.commit()
+            return {"property": new_property.to_dict()}
+        else:
+            print("add_property: validation failed →", form.errors)
+            return {'errors': form.errors}, 400
+
+    except Exception as e:
+        print("add_property: unexpected error →", e)
+        return {'errors': ['Internal server error']}, 500
 
 @property_routes.route("/<int:property_id>", methods=["PUT"])
 @login_required

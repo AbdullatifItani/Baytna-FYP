@@ -30,6 +30,7 @@ const PriceEstimator = () => {
                 formData,
                 {
                     headers: { "Content-Type": "application/json" },
+                    withCredentials: true,
                 }
             );
             setPredictedPrice(response.data.predicted_price);
@@ -42,6 +43,7 @@ const PriceEstimator = () => {
 
     return (
         <div className="price-estimator">
+            <h2>Estimate Your Property Price</h2>
             <form onSubmit={handleSubmit}>
                 <input
                     name="bed"
@@ -59,7 +61,7 @@ const PriceEstimator = () => {
                     name="sqft"
                     type="number"
                     onChange={handleChange}
-                    placeholder="Square Feet"
+                    placeholder="Meters Squared"
                 />
                 <input
                     name="lot"

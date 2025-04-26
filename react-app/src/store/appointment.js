@@ -31,7 +31,9 @@ const deleteAppointment = (appointmentId) => {
 // Thunks
 export const getAllAppointments = () => async (dispatch) => {
     try {
-        const response = await axios.get(`${BASE_URL}/api/appointments/`);
+        const response = await axios.get(`${BASE_URL}/api/appointments/`, {
+            withCredentials: true, // Include credentials (cookies)
+        });
         dispatch(getAppointments(response.data.appointments));
         return response.data;
     } catch (error) {
@@ -48,6 +50,7 @@ export const addAppointment = (appointment) => async (dispatch) => {
             headers: {
                 "Content-Type": "application/json",
             },
+            withCredentials: true, // Include credentials (cookies)
         });
         if (response.data.errors) {
             return response.data;
@@ -71,6 +74,7 @@ export const editAppointment = (appointment) => async (dispatch) => {
                 headers: {
                     "Content-Type": "application/json",
                 },
+                withCredentials: true, // Include credentials (cookies)
             }
         );
         if (response.data.errors) {
@@ -88,7 +92,9 @@ export const editAppointment = (appointment) => async (dispatch) => {
 
 export const deleteThisAppointment = (appointmentId) => async (dispatch) => {
     try {
-        const response = await axios.delete(`${BASE_URL}/api/appointments/${appointmentId}`);
+        const response = await axios.delete(`${BASE_URL}/api/appointments/${appointmentId}`, {
+            withCredentials: true, // Include credentials (cookies)
+        });
         if (response.data.errors) {
             return response.data;
         }

@@ -17,7 +17,7 @@ Query: Show me a 3-bedroom property in Tripoli
 Expected Response: A list of 3-bedroom properties in Tripoli.
 Detailed Search:
 
-Query: Find me a 4-bedroom house in Beirut with a garage and built after 2010
+Query: Find me a 3-bedroom house in Beirut with a garage and built after 2009 that costs under 350000$ and is greater than 1000sqft.
 Expected Response: A list of 4-bedroom houses in Beirut with a garage and built after 2010.
 Street-Specific Search:
 

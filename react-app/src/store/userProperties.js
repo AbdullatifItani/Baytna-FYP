@@ -13,7 +13,9 @@ const getUserProperties = (properties) => ({
 // Thunks
 export const fetchUserProperties = (userId) => async (dispatch) => {
     try {
-        const response = await axios.get(`${BASE_URL}/api/properties/user/${userId}`);
+        const response = await axios.get(`${BASE_URL}/api/properties/user/${userId}`, {
+            withCredentials: true, // Include credentials (cookies)
+        });
         if (response.status === 200) {
             dispatch(getUserProperties(response.data.properties));
             return response.data;

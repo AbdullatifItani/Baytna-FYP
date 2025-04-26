@@ -23,7 +23,9 @@ const getAgent = (agent) => {
 // Thunks
 export const getAllAgents = () => async (dispatch) => {
     try {
-        const response = await axios.get(`${BASE_URL}/api/agents/`);
+        const response = await axios.get(`${BASE_URL}/api/agents/`, {
+            withCredentials: true, // Include credentials (cookies)
+        });
         dispatch(getAgents(response.data.agents));
         return response.data;
     } catch (error) {
@@ -36,7 +38,9 @@ export const getAllAgents = () => async (dispatch) => {
 
 export const getThisAgent = (agent_id) => async (dispatch) => {
     try {
-        const response = await axios.get(`${BASE_URL}/api/agents/${agent_id}`);
+        const response = await axios.get(`${BASE_URL}/api/agents/${agent_id}`, {
+            withCredentials: true, // Include credentials (cookies)
+        });
         dispatch(getAgent(response.data.agent));
         return response.data;
     } catch (error) {

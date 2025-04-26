@@ -1,44 +1,70 @@
 .price-estimator {
-    text-align: center;
-    margin-top: 20px;
-    color: #333;
-  }
-  
+  max-width: 600px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  color: #333;
+}
+
+.price-estimator h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.price-estimator form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.price-estimator input {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.price-estimator input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0,123,255,0.4);
+}
+
+.price-estimator button {
+  grid-column: 1 / -1;
+  padding: 16px;
+  font-size: 18px;
+  color: #fff;
+  background: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.price-estimator button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.price-estimator__result {
+  grid-column: 1 / -1;
+  margin-top: 25px;
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
   .price-estimator form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    grid-template-columns: 1fr;
   }
-  
-  .price-estimator input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .price-estimator button {
-    padding: 10px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .price-estimator button:hover {
-    background-color: #0056b3;
-  }
-  
-  .price-estimator__result {
-    font-size: 18px;
-  }
+}

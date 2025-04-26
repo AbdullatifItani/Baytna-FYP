@@ -25,7 +25,9 @@ const deleteReview = (reviewId) => ({
 // Thunks
 export const getAllReviews = (agentId) => async (dispatch) => {
     try {
-        const response = await axios.get(`${BASE_URL}/api/agents/${agentId}/reviews`);
+        const response = await axios.get(`${BASE_URL}/api/agents/${agentId}/reviews`, {
+            withCredentials: true, // Include credentials (cookies)
+        });
         if (response.status === 200) {
             dispatch(getReviews(response.data.reviews));
             return response.data;
@@ -44,6 +46,7 @@ export const addReview = (review) => async (dispatch) => {
             headers: {
                 "Content-Type": "application/json",
             },
+            withCredentials: true, // Include credentials (cookies)
         });
         if (response.status === 200) {
             dispatch(addEditReview(response.data.review));
@@ -63,6 +66,7 @@ export const editReview = (review) => async (dispatch) => {
             headers: {
                 "Content-Type": "application/json",
             },
+            withCredentials: true, // Include credentials (cookies)
         });
         if (response.status === 200) {
             dispatch(addEditReview(response.data.review));
@@ -78,7 +82,9 @@ export const editReview = (review) => async (dispatch) => {
 
 export const deleteThisReview = (reviewId) => async (dispatch) => {
     try {
-        const response = await axios.delete(`${BASE_URL}/api/reviews/${reviewId}`);
+        const response = await axios.delete(`${BASE_URL}/api/reviews/${reviewId}`, {
+            withCredentials: true, // Include credentials (cookies)
+        });
         if (response.status === 200) {
             dispatch(deleteReview(reviewId));
             return;

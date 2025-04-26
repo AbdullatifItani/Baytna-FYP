@@ -37,7 +37,9 @@ const deleteProperty = (propertyId) => ({
 // Thunks
 export const searchProperties = (term) => async (dispatch) => {
     try {
-        const response = await axios.get(`${BASE_URL}/api/search/${term}`);
+        const response = await axios.get(`${BASE_URL}/api/search/${term}`, {
+            withCredentials: true, // Include credentials (cookies)
+        });
         dispatch(getProperties(response.data.properties));
         return response.data;
     } catch (error) {
@@ -52,6 +54,7 @@ export const areaProperties = (payload) => async (dispatch) => {
     try {
         const response = await axios.post(`${BASE_URL}/api/search/areas`, payload, {
             headers: { "Content-Type": "application/json" },
+            withCredentials: true, // Include credentials (cookies)
         });
         dispatch(getProperties(response.data.properties));
         return response.data;
@@ -65,7 +68,9 @@ export const areaProperties = (payload) => async (dispatch) => {
 
 export const getThisProperty = (property_id) => async (dispatch) => {
     try {
-        const response = await axios.get(`${BASE_URL}/api/properties/${property_id}`);
+        const response = await axios.get(`${BASE_URL}/api/properties/${property_id}`, {
+            withCredentials: true, // Include credentials (cookies)
+        });
         dispatch(getProperty(response.data.property));
         return response.data;
     } catch (error) {
@@ -80,6 +85,7 @@ export const createProperty = (property) => async (dispatch) => {
     try {
         const response = await axios.post(`${BASE_URL}/api/properties/`, property, {
             headers: { "Content-Type": "application/json" },
+            withCredentials: true, // Include credentials (cookies)
         });
         dispatch(addProperty(response.data.property));
         return response.data;
@@ -95,6 +101,7 @@ export const updateProperty = (property) => async (dispatch) => {
     try {
         const response = await axios.put(`${BASE_URL}/api/properties/${property.id}`, property, {
             headers: { "Content-Type": "application/json" },
+            withCredentials: true, // Include credentials (cookies)
         });
         dispatch(editProperty(response.data.property));
         return response.data;
@@ -108,7 +115,9 @@ export const updateProperty = (property) => async (dispatch) => {
 
 export const removeProperty = (propertyId) => async (dispatch) => {
     try {
-        const response = await axios.delete(`${BASE_URL}/api/properties/${propertyId}`);
+        const response = await axios.delete(`${BASE_URL}/api/properties/${propertyId}`, {
+            withCredentials: true, // Include credentials (cookies)
+        });
         dispatch(deleteProperty(propertyId));
         return { message: "Property deleted successfully" };
     } catch (error) {

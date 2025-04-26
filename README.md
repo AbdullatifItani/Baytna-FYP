@@ -90,6 +90,8 @@ export NODE_OPTIONS=--openssl-legacy-provider
 npm start
 ```
 
+- Open in Google Chrome due to CORS issues
+
 7. Have fun!
 
 ## Application Architecture

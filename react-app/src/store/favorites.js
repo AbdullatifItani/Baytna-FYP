@@ -25,7 +25,9 @@ export const removeFavorite = (propertyId) => ({
 // Thunks
 export const fetchFavorites = () => async (dispatch) => {
     try {
-        const response = await axios.get(`${BASE_URL}/api/favorites/`);
+        const response = await axios.get(`${BASE_URL}/api/favorites/`, {
+            withCredentials: true, // Include credentials (cookies)
+        });
         if (response.status === 200) {
             dispatch(getFavorites(response.data.favorites));
         }
@@ -36,7 +38,13 @@ export const fetchFavorites = () => async (dispatch) => {
 
 export const addFavoriteProperty = (propertyId) => async (dispatch) => {
     try {
-        const response = await axios.post(`${BASE_URL}/api/favorites/${propertyId}`);
+        const response = await axios.post(
+            `${BASE_URL}/api/favorites/${propertyId}`,
+            {},
+            {
+                withCredentials: true, // Include credentials (cookies)
+            }
+        );
         if (response.status === 200) {
             dispatch(addFavorite(propertyId));
         }
@@ -47,7 +55,9 @@ export const addFavoriteProperty = (propertyId) => async (dispatch) => {
 
 export const removeFavoriteProperty = (propertyId) => async (dispatch) => {
     try {
-        const response = await axios.delete(`${BASE_URL}/api/favorites/${propertyId}`);
+        const response = await axios.delete(`${BASE_URL}/api/favorites/${propertyId}`, {
+            withCredentials: true, // Include credentials (cookies)
+        });
         if (response.status === 200) {
             dispatch(removeFavorite(propertyId));
         }

@@ -84,19 +84,12 @@ CORS(
     resources={
         r"/*": {
             "origins": [
-                "http://localhost:3000",
-                "http://127.0.0.1:3000",
-                "http://[::1]:3000",
-                "http://localhost:3000/",
-                "http://127.0.0.1:3000/",
-                "http://[::1]:3000/",
-
-
+                "http://localhost:3000",  # Frontend origin
+                "http://127.0.0.1:3000",  # Alternative localhost
             ],
             "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
             "allow_headers": ["Content-Type", "Authorization"],
-            "expose_headers": ["Content-Type", "Authorization"]
-
+            "expose_headers": ["Content-Type", "Authorization"],
         }
     }
 )

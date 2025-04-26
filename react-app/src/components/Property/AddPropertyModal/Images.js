@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import UploadImage from '../UploadImage';
 
-const Images = ({ formData, handleChange, handleImageUpload }) => (
-  <div>
-    <h2>Images</h2>
-    <input type="text" 
-    name="front_img" 
-    value={formData.front_img} 
-    onChange={handleChange} 
-    placeholder="Front Image URL" 
-    />
-    <UploadImage onUpload={handleImageUpload} />
-  </div>
-);
+const Images = ({ handleImageUpload }) => {
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
+  const onUploadSuccess = (url) => {
+    setError("");
+    setSuccess("Image uploaded successfully.");
+    handleImageUpload(url);
+  };
+
+  const onUploadError = () => {
+    setSuccess(""); 
+    setError("Image upload failed. Please try again.");
+  };
+
+  return (
+    <div className="images-step">
+      <h2>Upload Front Image</h2>
+      <UploadImage onUpload={onUploadSuccess} onError={onUploadError} />
+      {error && <p className="error-message">{error}</p>}
+      {success && <p className="success-message">{success}</p>}
+    </div>
+  );
+};
 
 export default Images;

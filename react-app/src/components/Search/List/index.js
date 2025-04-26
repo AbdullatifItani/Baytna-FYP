@@ -65,7 +65,9 @@ const List = ({
     useEffect(() => {
         // Fetch search terms
         axios
-            .get(`${BASE_URL}/api/search/terms`)
+            .get(`${BASE_URL}/api/search/terms`, {
+                withCredentials: true, // Include credentials (cookies)
+            })
             .then((response) => setSearchList(response.data.terms))
             .catch((err) => console.log(err));
         if (searchParam) {

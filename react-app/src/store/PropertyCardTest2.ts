@@ -36,8 +36,12 @@ const PropertyCard = ({ property, setOver }) => {
         async function fetchEstimate() {
             try {
                 const response = await axios.get(
-                    `http://127.0.0.1:5000/api/properties/${property.id}/validate-price`
+                    `http://127.0.0.1:5000/api/properties/${property.id}/validate-price`,
+                    {
+                        withCredentials: true, // Include credentials (cookies)
+                    }
                 );
+                
                 if (response.status === 200) {
                     setEstimate(response.data.predicted_price);
                 }

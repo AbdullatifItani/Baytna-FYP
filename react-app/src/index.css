@@ -25,6 +25,7 @@
 @import url("./css/savedHomes.css");
 @import url("./css/chatbot.css");
 @import url("./css/priceEstimator.css");
+@import url("./css/propertyModal.css");
 
 :root {
 	--blue: #016bff;

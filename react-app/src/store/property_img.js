@@ -15,7 +15,12 @@ const getImages = (images) => {
 // Thunks
 export const getAllImages = (propertyId) => async (dispatch) => {
     try {
-        const response = await axios.get(`${BASE_URL}/api/properties/${propertyId}/images`);
+        const response = await axios.get(
+            `${BASE_URL}/api/properties/${propertyId}/images`,
+            {
+                withCredentials: true, // Include credentials (cookies)
+            }
+        );
         if (response.status === 200) {
             dispatch(getImages(response.data.images));
             return response.data;
