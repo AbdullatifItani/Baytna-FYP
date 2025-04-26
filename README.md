@@ -90,7 +90,7 @@ export NODE_OPTIONS=--openssl-legacy-provider
 npm start
 ```
 
-- Open in Google Chrome due to CORS issues
+- Open in Google Chrome due to CORS issues and use 127.0.0.1 not localhost to avoid CORS issues.
 
 7. Have fun!
 
